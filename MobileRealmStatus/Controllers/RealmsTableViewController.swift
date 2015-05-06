@@ -16,26 +16,9 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchResultController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.sizeToFit()
-            
-            self.tableView.tableHeaderView = controller.searchBar
-            
-            return controller
-        })()
-        
-        let api = RealmsApi()
-        api.realmStatus() { (realms: [Realm]) -> () in
-            dispatch_async(dispatch_get_main_queue()) {
-                self.realms = realms
-                self.tableView.reloadData()
-            }
-        }
+        self.searchResultController = setupSearchBar()
+        retrieveRealms()
     }
-
 
     // MARK: - Table view data source
 
@@ -67,11 +50,32 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         self.tableView.reloadData()
     }
     
+    private func retrieveRealms() {
+        let api = RealmsApi()
+        api.realmStatus() { (realms: [Realm]) -> () in
+            dispatch_async(dispatch_get_main_queue()) {
+                self.realms = realms
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     private func realmsForTable() -> [Realm] {
         if searchResultController.active {
             return self.filteredRealms
         } else {
             return self.realms
         }
+    }
+    
+    private func setupSearchBar() -> UISearchController {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchResultsUpdater = self
+        controller.dimsBackgroundDuringPresentation = false
+        controller.searchBar.sizeToFit()
+        
+        self.tableView.tableHeaderView = controller.searchBar
+        
+        return controller
     }
 }

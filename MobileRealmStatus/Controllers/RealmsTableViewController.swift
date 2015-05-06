@@ -8,12 +8,24 @@
 
 import UIKit
 
-class RealmsTableViewController: UITableViewController {
-    
+class RealmsTableViewController: UITableViewController, UISearchResultsUpdating {
     var realms = [Realm]()
+    var filteredRealms = [Realm]()
+    var searchResultController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.searchResultController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
         
         let api = RealmsApi()
         api.realmStatus() { (realms: [Realm]) -> () in
@@ -32,15 +44,34 @@ class RealmsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realms.count
+        return realmsForTable().count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
 
-        let realm = realms[indexPath.row]
+        let realm = realmsForTable()[indexPath.row]
         cell.textLabel?.text = realm.name
         
         return cell
+    }
+    
+    // MARK: - UISearchResultsUpdating
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
+        
+        self.filteredRealms = realms.filter { searchPredicate.evaluateWithObject($0.name) }
+        
+        self.tableView.reloadData()
+    }
+    
+    private func realmsForTable() -> [Realm] {
+        if searchResultController.active {
+            return self.filteredRealms
+        } else {
+            return self.realms
+        }
     }
 }

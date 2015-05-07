@@ -51,9 +51,9 @@ class RealmsApi {
     
     private func parseRealm(realmJson: [String: AnyObject]) -> Realm? {
         if let name = realmJson["name"] as? String {
-            if let battlegroup = realmJson["battlegroup"] as? String {
+            if let type = realmJson["type"] as? String {
                 if let status = realmJson["status"] as? Bool {
-                    return Realm(name: name, battlegroup: battlegroup, status: status)
+                    return Realm(name: name, type: type, status: status)
                 }
             }
         }

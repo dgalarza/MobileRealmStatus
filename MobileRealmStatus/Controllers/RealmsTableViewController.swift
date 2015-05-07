@@ -31,10 +31,10 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! RealmTableViewCell
 
         let realm = realmsForTable()[indexPath.row]
-        cell.textLabel?.text = realm.name
+        cell.realm = realm
         
         return cell
     }

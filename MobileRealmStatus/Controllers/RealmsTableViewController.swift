@@ -8,13 +8,26 @@
 
 import UIKit
 
-class RealmsTableViewController: UITableViewController {
+class RealmsTableViewController: UITableViewController, UISearchResultsUpdating {
     var realms = [Realm]()
+    var filteredRealms = [Realm]()
+    var searchResultsController = UISearchController()
+
+    var dataSource: [Realm] {
+        get {
+            if searchResultsController.active {
+                return filteredRealms
+            } else {
+                return realms
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         retrieveRealms()
+        searchResultsController = setupSearch()
     }
     
     // MARK: - Table view data source
@@ -24,13 +37,13 @@ class RealmsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realms.count
+        return dataSource.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
 
-        let realm = realms[indexPath.row]
+        let realm = dataSource[indexPath.row]
         cell.textLabel?.text = realm.name
         cell.detailTextLabel?.text = realm.displayType()
         
@@ -43,6 +56,15 @@ class RealmsTableViewController: UITableViewController {
         return cell
     }
     
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
+
+        filteredRealms = realms.filter { searchPredicate.evaluateWithObject($0.name) }
+
+        tableView.reloadData()
+    }
+
     private func retrieveRealms() {
         let api = RealmsApi()
         api.realmStatus() { (realms: [Realm]) -> () in
@@ -51,5 +73,17 @@ class RealmsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+
+    private func setupSearch() -> UISearchController {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+
+        let searchBar = searchController.searchBar
+        searchBar.sizeToFit()
+        tableView.tableHeaderView = searchBar
+
+        return searchController
     }
 }

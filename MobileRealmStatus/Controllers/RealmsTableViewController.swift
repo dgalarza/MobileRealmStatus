@@ -8,18 +8,15 @@
 
 import UIKit
 
-class RealmsTableViewController: UITableViewController, UISearchResultsUpdating {
+class RealmsTableViewController: UITableViewController {
     var realms = [Realm]()
-    var filteredRealms = [Realm]()
-    var searchResultController = UISearchController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchResultController = setupSearchBar()
         retrieveRealms()
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -27,27 +24,23 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realmsForTable().count
+        return realms.count
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! RealmTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
 
-        let realm = realmsForTable()[indexPath.row]
-        cell.realm = realm
+        let realm = realms[indexPath.row]
+        cell.textLabel?.text = realm.name
+        cell.detailTextLabel?.text = realm.displayType()
         
+        if let imageView = cell.imageView {
+            let image = UIImage(named: "Available")
+            imageView.image = image
+            
+        }
+
         return cell
-    }
-    
-    // MARK: - UISearchResultsUpdating
-    
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        let searchText = searchController.searchBar.text
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
-        
-        self.filteredRealms = realms.filter { searchPredicate.evaluateWithObject($0.name) }
-        
-        self.tableView.reloadData()
     }
     
     private func retrieveRealms() {
@@ -58,24 +51,5 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
                 self.tableView.reloadData()
             }
         }
-    }
-    
-    private func realmsForTable() -> [Realm] {
-        if searchResultController.active {
-            return self.filteredRealms
-        } else {
-            return self.realms
-        }
-    }
-    
-    private func setupSearchBar() -> UISearchController {
-        let controller = UISearchController(searchResultsController: nil)
-        controller.searchResultsUpdater = self
-        controller.dimsBackgroundDuringPresentation = false
-        controller.searchBar.sizeToFit()
-        
-        self.tableView.tableHeaderView = controller.searchBar
-        
-        return controller
     }
 }

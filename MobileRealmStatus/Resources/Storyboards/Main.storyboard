@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sfA-yQ-2Jr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Realm Status-->
@@ -14,59 +13,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="Realm" selectionStyle="default" indentationWidth="10" reuseIdentifier="Realm" rowHeight="73" id="NaJ-OT-m9D" customClass="RealmTableViewCell" customModule="MobileRealmStatus" customModuleProvider="target">
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="Realm" selectionStyle="default" indentationWidth="10" reuseIdentifier="Realm" textLabel="BpM-U1-7BH" detailTextLabel="Z0Q-4f-zoZ" rowHeight="73" style="IBUITableViewCellStyleSubtitle" id="NaJ-OT-m9D" customClass="RealmTableViewCell" customModule="MobileRealmStatus" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NaJ-OT-m9D" id="Yt7-da-tsE">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arthas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sci-lH-S8m">
-                                            <rect key="frame" x="8" y="14" width="49" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BpM-U1-7BH">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PvP" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP4-ec-5l7">
-                                            <rect key="frame" x="8" y="43" width="65" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="0FJ-25-HXa"/>
-                                                <constraint firstAttribute="width" constant="65" id="8Bw-jj-guf"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-MI-XT6">
-                                            <rect key="frame" x="530" y="25" width="69" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="69" id="TS2-1a-fXM"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Z0Q-4f-zoZ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <rect key="contentStretch" x="0.95000000000000029" y="0.0" width="1" height="1"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="HP4-ec-5l7" firstAttribute="bottom" secondItem="Yt7-da-tsE" secondAttribute="bottomMargin" id="Hyx-uu-q6V"/>
-                                        <constraint firstItem="sci-lH-S8m" firstAttribute="top" secondItem="Yt7-da-tsE" secondAttribute="topMargin" constant="6" id="LxU-tw-054"/>
-                                        <constraint firstItem="sci-lH-S8m" firstAttribute="leading" secondItem="Yt7-da-tsE" secondAttribute="leadingMargin" id="OZJ-rJ-JpQ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Abd-MI-XT6" secondAttribute="bottom" constant="18" id="PYB-H1-bic"/>
-                                        <constraint firstItem="HP4-ec-5l7" firstAttribute="leading" secondItem="Yt7-da-tsE" secondAttribute="leadingMargin" id="S2h-7C-hAH"/>
-                                        <constraint firstItem="Abd-MI-XT6" firstAttribute="top" secondItem="Yt7-da-tsE" secondAttribute="topMargin" constant="17" id="VQB-b7-5XC"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Abd-MI-XT6" secondAttribute="trailing" constant="-7" id="ama-x8-Hxa"/>
-                                        <constraint firstItem="sci-lH-S8m" firstAttribute="top" secondItem="Yt7-da-tsE" secondAttribute="topMargin" constant="6" id="d3B-ec-ocR"/>
-                                        <constraint firstItem="sci-lH-S8m" firstAttribute="top" secondItem="Yt7-da-tsE" secondAttribute="topMargin" constant="2" id="wIS-Ic-irV"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="wIS-Ic-irV"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="realmNameLabel" destination="sci-lH-S8m" id="C7l-m9-7Wm"/>
-                                    <outlet property="realmStatusLabel" destination="Abd-MI-XT6" id="tun-I6-Lkk"/>
-                                    <outlet property="realmTypeLabel" destination="HP4-ec-5l7" id="Eyu-Cf-ItU"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

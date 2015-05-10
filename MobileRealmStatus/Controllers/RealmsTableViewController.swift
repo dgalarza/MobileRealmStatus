@@ -60,6 +60,8 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         return cell
     }
     
+    // MARK: - UISearchResultsUpdating
+
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
@@ -68,6 +70,8 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
 
         tableView.reloadData()
     }
+
+    // MARK: Private
 
     private func retrieveRealms() {
         let api = RealmsApi()

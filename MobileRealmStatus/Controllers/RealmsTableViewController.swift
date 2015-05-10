@@ -30,6 +30,10 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         searchResultsController = setupSearch()
     }
     
+    @IBAction func refresh(sender: UIRefreshControl) {
+        retrieveRealms()
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -67,10 +71,14 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
 
     private func retrieveRealms() {
         let api = RealmsApi()
+
+        refreshControl?.beginRefreshing()
+
         api.realmStatus() { (realms: [Realm]) -> () in
             dispatch_async(dispatch_get_main_queue()) {
                 self.realms = realms
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
         }
     }

@@ -33,10 +33,6 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         navigationItem.title = "All Realms"
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
-    @IBAction func refresh(sender: UIRefreshControl) {
-        retrieveRealms()
-    }
 
     // MARK: - Table view data source
 
@@ -71,7 +67,6 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         favorites.addFavorite(realm.name)
     }
 
-
     // MARK: - UISearchResultsUpdating
 
     func updateSearchResultsForSearchController(searchController: UISearchController) {
@@ -84,20 +79,6 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     }
 
     // MARK: Private
-
-    private func retrieveRealms() {
-        let api = RealmsApi()
-
-        refreshControl?.beginRefreshing()
-
-        api.realmStatus() { (realms: [Realm]) -> () in
-            dispatch_async(dispatch_get_main_queue()) {
-                self.realms = realms
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            }
-        }
-    }
 
     private func setupSearch() -> UISearchController {
         let searchController = UISearchController(searchResultsController: nil)

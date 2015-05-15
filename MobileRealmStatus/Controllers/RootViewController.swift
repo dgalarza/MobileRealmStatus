@@ -10,6 +10,7 @@ import UIKit
 
 class RootViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var realms = [Realm]()
+    private var refreshControl: UIRefreshControl!
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,6 +24,13 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh Realm Status")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+
+        refreshControl.center = view.center
+        self.tableView.addSubview(refreshControl)
+
         retrieveRealms()
     }
 
@@ -34,6 +42,10 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let realmsViewController = segue.destinationViewController as! RealmsTableViewController
         realmsViewController.realms = realms
+    }
+
+    func refresh(sender: AnyObject) {
+        retrieveRealms()
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,10 +71,13 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func retrieveRealms() {
         let api = RealmsApi()
 
+        refreshControl?.beginRefreshing()
+
         api.realmStatus() { (realms: [Realm]) -> () in
             dispatch_async(dispatch_get_main_queue()) {
                 self.realms = realms
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
         }
     }

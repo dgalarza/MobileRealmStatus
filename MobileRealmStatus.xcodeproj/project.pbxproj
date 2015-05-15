@@ -10,6 +10,7 @@
 		0A7535F5F27E621A6659354A /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; };
 		10316F86452F2FBCAB95DA31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB33AC4B689E2E3FC87C7696 /* Images.xcassets */; };
 		220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220DCFCE1AF8618F000022EC /* RealmsApi.swift */; };
+		22E649291B06415000578AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* RootViewController.swift */; };
 		22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
 		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		220DCFCE1AF8618F000022EC /* RealmsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsApi.swift; sourceTree = "<group>"; };
+		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		22F5DFBA1AF86043002F37B1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */,
 				22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */,
+				22E649281B06415000578AFD /* RootViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */,
 				22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */,
 				A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */,
+				22E649291B06415000578AFD /* RootViewController.swift in Sources */,
 				0A7535F5F27E621A6659354A /* Main.storyboard in Sources */,
 				C750CCFEE2EAB2985A44F9B9 /* LaunchScreen.xib in Sources */,
 				22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */,

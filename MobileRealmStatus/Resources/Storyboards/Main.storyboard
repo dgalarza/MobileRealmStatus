@@ -1,33 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sfA-yQ-2Jr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pTK-5c-Cx3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Realm Status-->
-        <scene sceneID="P8r-ic-6Vg">
+        <!--Root View Controller-->
+        <scene sceneID="t32-t2-qZY">
             <objects>
-                <tableViewController id="7Cz-ki-cYM" customClass="RealmsTableViewController" customModule="MobileRealmStatus" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="fZj-3U-Lj3">
+                <viewController id="2Es-8L-Ud0" customClass="RootViewController" customModule="MobileRealmStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MM8-dR-xKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ijL-IE-s2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ow-Hk-g34">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-gh-bdI">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Add Realm" id="oSZ-so-sMd">
+                                        <connections>
+                                            <segue destination="tgZ-Li-UPb" kind="show" id="IN4-EG-klT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6ac-gh-bdI" firstAttribute="bottom" secondItem="ijL-IE-s2L" secondAttribute="top" id="Hn2-p7-hif"/>
+                            <constraint firstItem="6ac-gh-bdI" firstAttribute="leading" secondItem="7Ow-Hk-g34" secondAttribute="leading" id="VPd-Vf-Yaq"/>
+                            <constraint firstAttribute="trailing" secondItem="6ac-gh-bdI" secondAttribute="trailing" id="m4F-Eg-FVB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ydq-Zb-G2x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBQ-RV-k3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="367"/>
+        </scene>
+        <!--Realms Table View Controller-->
+        <scene sceneID="Bpi-E5-k3S">
+            <objects>
+                <tableViewController id="tgZ-Li-UPb" customClass="RealmsTableViewController" customModule="MobileRealmStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="fbo-Fv-C6X">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="Realm" selectionStyle="default" indentationWidth="10" reuseIdentifier="Realm" textLabel="BpM-U1-7BH" detailTextLabel="Z0Q-4f-zoZ" rowHeight="73" style="IBUITableViewCellStyleSubtitle" id="NaJ-OT-m9D">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Realm" editingAccessoryType="detailDisclosureButton" textLabel="4L8-xb-tuS" detailTextLabel="pq3-85-9yH" rowHeight="77" style="IBUITableViewCellStyleSubtitle" id="TdD-3D-hJV">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NaJ-OT-m9D" id="Yt7-da-tsE">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TdD-3D-hJV" id="EX4-x9-3ag">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BpM-U1-7BH">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4L8-xb-tuS">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Z0Q-4f-zoZ">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pq3-85-9yH">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <rect key="contentStretch" x="0.95000000000000029" y="0.0" width="1" height="1"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -36,40 +71,35 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="7Cz-ki-cYM" id="HaO-mx-cUM"/>
-                            <outlet property="delegate" destination="7Cz-ki-cYM" id="K4O-Rv-Frr"/>
+                            <outlet property="dataSource" destination="tgZ-Li-UPb" id="gdM-Py-XYW"/>
+                            <outlet property="delegate" destination="tgZ-Li-UPb" id="tsx-PB-4iU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Realm Status" id="lvF-vZ-8oh"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="3DE-JN-31X">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <action selector="refresh:" destination="7Cz-ki-cYM" eventType="valueChanged" id="KJU-2W-htW"/>
-                        </connections>
-                    </refreshControl>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TFY-Gn-lJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VJ-uB-8LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="543"/>
+            <point key="canvasLocation" x="2188" y="367"/>
         </scene>
-        <!--Realms-->
-        <scene sceneID="hdU-yp-Me5">
+        <!--Navigation Controller-->
+        <scene sceneID="yhg-2D-yM6">
             <objects>
-                <navigationController title="Realms" id="sfA-yQ-2Jr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Pp-Sg-zvx">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pTK-5c-Cx3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I5C-vH-utD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QFw-ep-Yq8">
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="isL-sw-wqC">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="7Cz-ki-cYM" kind="relationship" relationship="rootViewController" id="ZFU-Lu-TW5"/>
+                        <segue destination="2Es-8L-Ud0" kind="relationship" relationship="rootViewController" id="7tL-HT-Klo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj9-hK-RAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Atz-xZ-iai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="543"/>
+            <point key="canvasLocation" x="515" y="367"/>
         </scene>
     </scenes>
 </document>

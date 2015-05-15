@@ -25,9 +25,13 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        retrieveRealms()
+
         searchResultsController = setupSearch()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "All Realms"
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     @IBAction func refresh(sender: UIRefreshControl) {

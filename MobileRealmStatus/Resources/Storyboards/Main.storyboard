@@ -52,14 +52,17 @@
             </objects>
             <point key="canvasLocation" x="1078" y="543"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Realms-->
         <scene sceneID="hdU-yp-Me5">
             <objects>
-                <navigationController id="sfA-yQ-2Jr" sceneMemberID="viewController">
+                <navigationController title="Realms" id="sfA-yQ-2Jr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Pp-Sg-zvx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QFw-ep-Yq8">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="7Cz-ki-cYM" kind="relationship" relationship="rootViewController" id="ZFU-Lu-TW5"/>
                     </connections>

@@ -24,28 +24,31 @@ class RealmsApi {
         if let url = NSURL(string: requestUrl) {
             let request = NSURLRequest(URL: url)
             let task = session.dataTaskWithRequest(request) { (data, response, error) in
-                var jsonErrorOptional: NSError?
-                let jsonOptional: AnyObject? = NSJSONSerialization.JSONObjectWithData(
-                    data,
-                    options: NSJSONReadingOptions(0),
-                    error: &jsonErrorOptional
-                )
-                
-                if let json = jsonOptional as? [String: [[String: AnyObject]]] {
-                    if let realmsJson = json["realms"] {
-                        var realms = [Realm]()
-                        for realmJson in realmsJson {
-                            if let realm = self.parseRealm(realmJson) {
-                                realms.append(realm)
-                            }
-                        }
-                        
-                        callback(realms)
-                    }
-                }
+                self.parseJson(data, callback: callback)
             }
             
             task.resume()
+        }
+    }
+
+    private func parseJson(data: NSData, callback: [Realm] -> ()) {
+        let jsonOptional: AnyObject? = NSJSONSerialization.JSONObjectWithData(
+            data,
+            options: NSJSONReadingOptions(0),
+            error: nil
+        )
+        
+        if let json = jsonOptional as? [String: [[String: AnyObject]]] {
+            if let realmsJson = json["realms"] {
+                var realms = [Realm]()
+                for realmJson in realmsJson {
+                    if let realm = self.parseRealm(realmJson) {
+                        realms.append(realm)
+                    }
+                }
+                
+                callback(realms)
+            }
         }
     }
     

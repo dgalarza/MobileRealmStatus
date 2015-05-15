@@ -63,7 +63,15 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
 
         return cell
     }
-    
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let favorites = FavoritesList.sharedFavoritesList
+        let realm = dataSource[indexPath.row]
+
+        favorites.addFavorite(realm.name)
+    }
+
+
     // MARK: - UISearchResultsUpdating
 
     func updateSearchResultsForSearchController(searchController: UISearchController) {

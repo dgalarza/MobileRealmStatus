@@ -2,7 +2,11 @@ source 'https://github.com/CocoaPods/Specs'
 
 platform :ios, '8.0'
 
+use_frameworks!
+
 # Add Application pods here
+
+pod 'Argo'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
@@ -26,4 +30,3 @@ post_install do | installer |
     FileUtils.cp_r(pods_acknowledgements_path, "#{settings_bundle_path}/Acknowledgements.plist", :remove_destination => true)
   end
 end
-

@@ -1,19 +1,28 @@
 PODS:
+  - Argo (1.0.1):
+    - Box (~> 1.2)
+    - Runes (~> 1.2)
+  - Box (1.2.0)
   - Expecta (1.0.0)
   - OCMock (3.1.2)
   - OHHTTPStubs (4.0.1)
+  - Runes (1.2.2)
   - Specta (1.0.0)
 
 DEPENDENCIES:
+  - Argo
   - Expecta
   - OCMock
   - OHHTTPStubs
   - Specta
 
 SPEC CHECKSUMS:
+  Argo: 0adbc4433ad29e202875355610d1a03a74928155
+  Box: 3345df1dee5c8cd639a663e368427c51f931d095
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   OHHTTPStubs: 69b1d48b7dfe838a355fdf48d8592d1042e3d85f
+  Runes: 90c9bba2be981c3777ac490aea0fc0c1acff0f97
   Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
 
 COCOAPODS: 0.37.1

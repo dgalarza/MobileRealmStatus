@@ -7,8 +7,7 @@ let requestUrl = "http://us.battle.net/api/wow/realm/status"
 struct RealmsApi {
     func realmStatus(callback: ([Realm]) -> Void) {
         if let url = NSURL(string: requestUrl) {
-            let request = NSURLRequest(URL: url)
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
                 self.parseJson(data, callback: callback)
             }
             

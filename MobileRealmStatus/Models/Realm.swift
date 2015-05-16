@@ -29,7 +29,7 @@ extension Realm: Decodable {
     }
 
     static func decode(j: JSON) -> Decoded<Realm> {
-        return Realm.create
+        return create
             <^> j <| "name"
             <*> j <| "type"
             <*> j <| "status"

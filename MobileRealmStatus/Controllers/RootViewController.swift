@@ -1,6 +1,7 @@
 import UIKit
 
 class RootViewController: UITableViewController {
+    private let cellIdentifier = "Realm"
     private var realms = [Realm]()
 
     var favoriteRealms: [Realm] {
@@ -34,7 +35,7 @@ class RootViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         let realm = favoriteRealms[indexPath.row]
 
         cell.textLabel?.text = realm.name

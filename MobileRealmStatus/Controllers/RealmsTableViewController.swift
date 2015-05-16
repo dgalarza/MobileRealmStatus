@@ -1,6 +1,7 @@
 import UIKit
 
 class RealmsTableViewController: UITableViewController, UISearchResultsUpdating {
+    private let cellIdentifier = "Realm"
     var realms = [Realm]()
     var filteredRealms = [Realm]()
     var searchResultsController = UISearchController()
@@ -28,7 +29,7 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
         let realm = dataSource[indexPath.row]
         cell.textLabel?.text = realm.name

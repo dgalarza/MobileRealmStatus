@@ -36,6 +36,13 @@ class FavoritesList {
         saveFavorites()
     }
 
+    func removeFavorite(realmName: String) {
+        if let index = find(favorites, realmName) {
+            favorites.removeAtIndex(index)
+            saveFavorites()
+        }
+    }
+
     private func saveFavorites() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(favorites, forKey: "favorites")

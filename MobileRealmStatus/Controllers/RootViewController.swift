@@ -8,11 +8,8 @@
 
 import UIKit
 
-class RootViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RootViewController: UITableViewController {
     private var realms = [Realm]()
-    private var refreshControl: UIRefreshControl!
-
-    @IBOutlet weak var tableView: UITableView!
 
     var favoriteRealms: [Realm] {
         get {
@@ -24,18 +21,10 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Refresh Realm Status")
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-
-        refreshControl.center = view.center
-        self.tableView.addSubview(refreshControl)
-
         retrieveRealms()
     }
 
     override func viewWillAppear(animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: true)
         tableView.reloadData()
     }
 
@@ -44,15 +33,15 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
         realmsViewController.realms = realms
     }
 
-    func refresh(sender: AnyObject) {
+    @IBAction func refresh(sender: UIRefreshControl) {
         retrieveRealms()
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoriteRealms.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Realm", forIndexPath: indexPath) as! UITableViewCell
         let realm = favoriteRealms[indexPath.row]
 
@@ -66,6 +55,19 @@ class RootViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
         return cell
+    }
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let realm = favoriteRealms[indexPath.row]
+            FavoritesList.sharedFavoritesList.removeFavorite(realm.name)
+
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 
     private func retrieveRealms() {

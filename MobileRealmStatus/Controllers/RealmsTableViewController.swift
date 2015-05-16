@@ -29,16 +29,7 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         searchResultsController = setupSearch()
     }
 
-    override func viewWillAppear(animated: Bool) {
-        navigationItem.title = "All Realms"
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -51,10 +42,10 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         cell.textLabel?.text = realm.name
         cell.detailTextLabel?.text = realm.displayType()
         
-        if let imageView = cell.imageView {
-            let image = UIImage(named: "Available")
-            imageView.image = image
-            
+        if realmIsFavorited(realm) {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
         }
 
         return cell
@@ -64,7 +55,13 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         let favorites = FavoritesList.sharedFavoritesList
         let realm = dataSource[indexPath.row]
 
-        favorites.addFavorite(realm.name)
+        if realmIsFavorited(realm) {
+            favorites.removeFavorite(realm.name)
+        } else {
+            favorites.addFavorite(realm.name)
+        }
+
+        tableView.reloadData()
     }
 
     // MARK: - UISearchResultsUpdating
@@ -90,5 +87,10 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
         tableView.tableHeaderView = searchBar
 
         return searchController
+    }
+
+    private func realmIsFavorited(realm: Realm) -> Bool {
+        let favorites = FavoritesList.sharedFavoritesList.favorites
+        return contains(favorites, realm.name)
     }
 }

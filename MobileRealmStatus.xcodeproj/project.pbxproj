@@ -10,6 +10,7 @@
 		0A7535F5F27E621A6659354A /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; };
 		10316F86452F2FBCAB95DA31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB33AC4B689E2E3FC87C7696 /* Images.xcassets */; };
 		220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220DCFCE1AF8618F000022EC /* RealmsApi.swift */; };
+		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		229F1DBB1B064C470025CD7B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22CDD9C099C01FBA6493603B /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927A586E3F4C273D22EA1CCC /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22E649291B06415000578AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* RootViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		220DCFCE1AF8618F000022EC /* RealmsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsApi.swift; sourceTree = "<group>"; };
+		2215F1E21B06E9CC00505FCD /* RealmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		22F5DFBA1AF86043002F37B1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		62A5D87A88931DC8B8D20A47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2215F1E21B06E9CC00505FCD /* RealmCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */,
+				2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */,
 				22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */,
 				A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */,
 				22E649291B06415000578AFD /* RootViewController.swift in Sources */,

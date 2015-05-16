@@ -5,13 +5,13 @@ let requestUrl = "http://us.battle.net/api/wow/realm/status"
 
 struct RealmsApi {
     func realmStatus(callback: ([Realm]) -> Void) {
-        if let url = NSURL(string: requestUrl) {
-            let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+        let url = NSURL(string: requestUrl)
+        let task = url.map { NSURLSession.sharedSession().dataTaskWithURL($0) { (data, response, error) in
                 self.parseJson(data, callback: callback)
             }
-            
-            task.resume()
         }
+
+        task?.resume()
     }
 
     private func parseJson(data: NSData, callback: [Realm] -> ()) {

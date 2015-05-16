@@ -1,21 +1,12 @@
 import Foundation
 
-class RealmsApi {
-    let requestUrl = "http://us.battle.net/api/wow/realm/status"
-    let session: NSURLSession
-    
-    init() {
-        let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        sessionConfiguration.timeoutIntervalForRequest = 30.0
-        sessionConfiguration.timeoutIntervalForResource = 30.0
-        
-        session = NSURLSession(configuration: sessionConfiguration)
-    }
-    
+let requestUrl = "http://us.battle.net/api/wow/realm/status"
+
+struct RealmsApi {
     func realmStatus(callback: ([Realm]) -> Void) {
         if let url = NSURL(string: requestUrl) {
             let request = NSURLRequest(URL: url)
-            let task = session.dataTaskWithRequest(request) { (data, response, error) in
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
                 self.parseJson(data, callback: callback)
             }
             

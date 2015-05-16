@@ -46,8 +46,8 @@ class RealmsApi {
                         realms.append(realm)
                     }
                 }
-                
-                callback(realms)
+
+                dispatch_async(dispatch_get_main_queue()) { callback(realms) }
             }
         }
     }

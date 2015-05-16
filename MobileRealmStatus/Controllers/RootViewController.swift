@@ -76,11 +76,9 @@ class RootViewController: UITableViewController {
         refreshControl?.beginRefreshing()
 
         api.realmStatus() { (realms: [Realm]) -> () in
-            dispatch_async(dispatch_get_main_queue()) {
-                self.realms = realms
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            }
+            self.realms = realms
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
         }
     }
 }

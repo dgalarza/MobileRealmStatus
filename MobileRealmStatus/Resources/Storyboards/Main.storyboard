@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="3000" y="367"/>
         </scene>
-        <!--Root View Controller-->
+        <!--My Realms-->
         <scene sceneID="Jkf-ya-N6p">
             <objects>
                 <tableViewController id="adw-DB-LF7" customClass="RootViewController" customModule="MobileRealmStatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xs8-lz-0iV">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dfb-xc-8q4">
@@ -81,7 +81,7 @@
                             <outlet property="delegate" destination="adw-DB-LF7" id="Hna-dM-i8D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8ao-0O-xl1">
+                    <navigationItem key="navigationItem" title="My Realms" id="8ao-0O-xl1">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="uL0-C6-4BZ">
                             <connections>
                                 <segue destination="tgZ-Li-UPb" kind="show" id="Rbk-RX-OxK"/>

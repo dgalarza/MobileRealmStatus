@@ -1,13 +1,13 @@
 import UIKit
+import Runes
 
 class RootViewController: UITableViewController {
     private let cellIdentifier = "Realm"
-    private var realms = [Realm]()
+    private var favoriteRealmsController: FavoriteRealmsController?
 
-    var favoriteRealms: [Realm] {
+    private var favoriteRealms: [Realm] {
         get {
-            let favorites = FavoritesList.sharedFavoritesList.favorites
-            return realms.filter { contains(favorites, $0.name) }
+            return favoriteRealmsController >>- { $0.favoriteRealms } ?? []
         }
     }
 
@@ -22,7 +22,7 @@ class RootViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let realmsViewController = segue.destinationViewController as! RealmsTableViewController
-        realmsViewController.realms = realms
+        realmsViewController.favoriteRealmsController = favoriteRealmsController
     }
 
     @IBAction func refresh(sender: UIRefreshControl) {
@@ -49,8 +49,7 @@ class RootViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             let realm = favoriteRealms[indexPath.row]
-            FavoritesList.sharedFavoritesList.removeFavorite(realm.name)
-
+            favoriteRealmsController?.unfavorite(realm)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -65,7 +64,7 @@ class RootViewController: UITableViewController {
 
 extension RootViewController: RealmsDelegate {
     func receivedRealms(realms: [Realm]) {
-        self.realms = realms
+        favoriteRealmsController = FavoriteRealmsController(realms: realms)
         refreshControl?.endRefreshing()
         tableView.reloadData()
     }

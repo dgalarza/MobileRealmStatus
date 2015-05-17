@@ -1,9 +1,11 @@
 import UIKit
+import Runes
 
-class RealmsTableViewController: UITableViewController, UISearchResultsUpdating {
+class RealmsTableViewController: UITableViewController {
     private let cellIdentifier = "Realm"
-    var realms = [Realm]()
-    var filteredRealms = [Realm]()
+    private var filteredRealms = [Realm]()
+
+    var favoriteRealmsController: FavoriteRealmsController?
     var searchResultsController = UISearchController()
 
     var dataSource: [Realm] {
@@ -11,14 +13,13 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
             if searchResultsController.active {
                 return filteredRealms
             } else {
-                return realms
+                return favoriteRealmsController.map { $0.realms } ?? []
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         searchResultsController = setupSearch()
     }
 
@@ -31,9 +32,11 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = dataSource[indexPath.row]
+        let isFavorited = favoriteRealmsController >>- { $0.realmIsFavorited(realm) } ?? false
+
         cell.viewModel = realm
 
-        if realmIsFavorited(realm) {
+        if isFavorited {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -45,28 +48,16 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let favorites = FavoritesList.sharedFavoritesList
         let realm = dataSource[indexPath.row]
+        let isFavorited = favoriteRealmsController >>- { $0.realmIsFavorited(realm) } ?? false
 
-        if realmIsFavorited(realm) {
-            favorites.removeFavorite(realm.name)
+        if isFavorited {
+            favoriteRealmsController?.unfavorite(realm)
         } else {
-            favorites.addFavorite(realm.name)
+            favoriteRealmsController?.addFavorite(realm)
         }
 
         tableView.reloadData()
     }
-
-    // MARK: - UISearchResultsUpdating
-
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        let searchText = searchController.searchBar.text
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
-
-        filteredRealms = realms.filter { searchPredicate.evaluateWithObject($0.name) }
-
-        tableView.reloadData()
-    }
-
-    // MARK: Private
 
     private func setupSearch() -> UISearchController {
         let searchController = UISearchController(searchResultsController: nil)
@@ -79,9 +70,16 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
 
         return searchController
     }
+}
 
-    private func realmIsFavorited(realm: Realm) -> Bool {
-        let favorites = FavoritesList.sharedFavoritesList.favorites
-        return contains(favorites, realm.name)
+extension RealmsTableViewController: UISearchResultsUpdating  {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
+        let realms = favoriteRealmsController.map { $0.realms } ?? []
+
+        filteredRealms = realms.filter { searchPredicate.evaluateWithObject($0.name) }
+
+        tableView.reloadData()
     }
 }

@@ -39,6 +39,7 @@ class RootViewController: UITableViewController {
         let realm = favoriteRealms[indexPath.row]
 
         cell.viewModel = realm
+        cell.includeStatusImage()
 
         return cell
     }

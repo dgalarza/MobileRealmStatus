@@ -21,7 +21,12 @@ class RealmCell: UITableViewCell {
         }
     }
 
+    func includeStatusImage() {
+        imageView?.image = UIImage(named: "Available")
+    }
+
     private func configureStyles() {
+        AppearanceManager.customizeRealmCell(self)
         let preferredHeadline = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         textLabel?.font = UIFont(name: "Helvetica-Bold", size: preferredHeadline.pointSize)
 
@@ -31,7 +36,7 @@ class RealmCell: UITableViewCell {
 
     private func update() {
         textLabel?.text = viewModel?.name
-        detailTextLabel?.text = viewModel?.displayType()
-        imageView?.image = UIImage(named: "Available")
+
+        viewModel.map { detailTextLabel?.text = "Realm Type \($0.displayType())" }
     }
 }

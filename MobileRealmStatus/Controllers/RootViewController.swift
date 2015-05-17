@@ -13,7 +13,6 @@ class RootViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         retrieveRealms()
     }
 
@@ -35,17 +34,10 @@ class RootViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = favoriteRealms[indexPath.row]
 
-        cell.textLabel?.text = realm.name
-        cell.detailTextLabel?.text = realm.displayType()
-        
-        if let imageView = cell.imageView {
-            let image = UIImage(named: "Available")
-            imageView.image = image
-            
-        }
+        cell.viewModel = realm
 
         return cell
     }
@@ -64,14 +56,17 @@ class RootViewController: UITableViewController {
     }
 
     private func retrieveRealms() {
-        let api = RealmsApi()
-
         refreshControl?.beginRefreshing()
 
-        api.realmStatus() { (realms: [Realm]) -> () in
-            self.realms = realms
-            self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
-        }
+        let realmsController = RealmsController(realmsDelegate: self)
+        realmsController.retrieveRealms()
+    }
+}
+
+extension RootViewController: RealmsDelegate {
+    func receivedRealms(realms: [Realm]) {
+        self.realms = realms
+        refreshControl?.endRefreshing()
+        tableView.reloadData()
     }
 }

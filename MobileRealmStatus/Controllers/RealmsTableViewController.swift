@@ -29,12 +29,10 @@ class RealmsTableViewController: UITableViewController, UISearchResultsUpdating 
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = dataSource[indexPath.row]
-        cell.textLabel?.text = realm.name
-        cell.detailTextLabel?.text = realm.displayType()
-        
+        cell.viewModel = realm
+
         if realmIsFavorited(realm) {
             cell.accessoryType = .Checkmark
         } else {

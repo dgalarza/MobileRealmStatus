@@ -13,7 +13,6 @@ struct AppearanceManager {
 
     private static func applyNavBarStyles() {
         let navigationBarAppearnce = UINavigationBar.appearance()
-        navigationBarAppearnce.translucent = false
         navigationBarAppearnce.barTintColor = UIColor.backgroundGray()
         navigationBarAppearnce.backgroundColor = UIColor.backgroundGray()
         navigationBarAppearnce.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)

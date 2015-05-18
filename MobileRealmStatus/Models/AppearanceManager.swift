@@ -4,6 +4,7 @@ struct AppearanceManager {
     static func applyCustomAppearance() {
         applyNavBarStyles()
         applyTableStyles()
+        applySearchStyles()
     }
 
     static func customizeRealmCell(cell: RealmCell) {
@@ -24,5 +25,11 @@ struct AppearanceManager {
         UITableView.appearance().backgroundColor = UIColor.backgroundGray()
         UITableView.appearance().separatorColor = UIColor.clearColor()
         RealmCell.appearance().backgroundColor = UIColor.backgroundGray()
+    }
+
+    private static func applySearchStyles() {
+        UISearchBar.appearance().backgroundColor = UIColor.backgroundGray()
+        UISearchBar.appearance().barTintColor = UIColor.backgroundGray()
+        UISearchBar.appearance().setBackgroundImage(UIImage(), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
     }
 }

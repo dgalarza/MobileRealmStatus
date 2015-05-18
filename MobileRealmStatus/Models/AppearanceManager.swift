@@ -18,7 +18,11 @@ struct AppearanceManager {
         navigationBarAppearnce.backgroundColor = UIColor.backgroundGray()
         navigationBarAppearnce.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         navigationBarAppearnce.shadowImage = UIImage()
-        navigationBarAppearnce.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.captionGray()]
+
+        navigationBarAppearnce.titleTextAttributes = [
+            NSFontAttributeName: UIFont.headlineFont()!,
+            NSForegroundColorAttributeName:UIColor.captionGray()
+        ]
     }
 
     private static func applyTableStyles() {

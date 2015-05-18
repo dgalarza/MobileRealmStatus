@@ -27,11 +27,8 @@ class RealmCell: UITableViewCell {
 
     private func configureStyles() {
         AppearanceManager.customizeRealmCell(self)
-        let preferredHeadline = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        textLabel?.font = UIFont(name: "Helvetica-Bold", size: preferredHeadline.pointSize)
-
-        let preferredCaption = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
-        detailTextLabel?.font = UIFont(name: "HelveticaNeue", size: preferredCaption.pointSize)
+        textLabel?.font = UIFont.headlineFont()
+        detailTextLabel?.font = UIFont.captionFont()
     }
 
     private func update() {

@@ -20,6 +20,9 @@
 		22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
 		22F5B6E71B084305008ED648 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
 		22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
+		22F5B6EB1B096027008ED648 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6EA1B096027008ED648 /* SearchResultsViewController.swift */; };
+		22F5B6F11B0964CD008ED648 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
+		22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
 		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
@@ -50,6 +53,9 @@
 		22F5B6E41B08427E008ED648 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		22F5B6E61B084305008ED648 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		22F5B6E81B084F65008ED648 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		22F5B6EA1B096027008ED648 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsSearchDelegate.swift; sourceTree = "<group>"; };
+		22F5B6F61B096B39008ED648 /* RealmSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSearchController.swift; sourceTree = "<group>"; };
 		22F5DFBA1AF86043002F37B1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */,
 				22E649281B06415000578AFD /* RootViewController.swift */,
+				22F5B6EA1B096027008ED648 /* SearchResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				22A270A51B081D6900C28773 /* RealmsDelegate.swift */,
+				22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */,
 				2215F1E51B081CBB00505FCD /* RealmsController.swift */,
 				22542EB51B0828F700145420 /* FavoriteRealmsController.swift */,
+				22F5B6F61B096B39008ED648 /* RealmSearchController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -529,12 +538,15 @@
 				22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */,
 				22A270A61B081D6900C28773 /* RealmsDelegate.swift in Sources */,
 				22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */,
+				22F5B6EB1B096027008ED648 /* SearchResultsViewController.swift in Sources */,
 				22E649291B06415000578AFD /* RootViewController.swift in Sources */,
 				0A7535F5F27E621A6659354A /* Main.storyboard in Sources */,
+				22F5B6F11B0964CD008ED648 /* RealmsSearchDelegate.swift in Sources */,
 				229F1DBB1B064C470025CD7B /* FavoritesList.swift in Sources */,
 				2215F1E61B081CBB00505FCD /* RealmsController.swift in Sources */,
 				C750CCFEE2EAB2985A44F9B9 /* LaunchScreen.xib in Sources */,
 				22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */,
+				22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

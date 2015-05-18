@@ -21,8 +21,7 @@ class SearchResultsViewController: UITableViewController {
         return filteredRealms.count
     }
 
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let favorites = FavoritesList.sharedFavoritesList
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let realm = filteredRealms[indexPath.row]
         let isFavorited = favoriteRealmsController >>- { $0.realmIsFavorited(realm) } ?? false
 
@@ -33,6 +32,10 @@ class SearchResultsViewController: UITableViewController {
         }
 
         tableView.reloadData()
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 77
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

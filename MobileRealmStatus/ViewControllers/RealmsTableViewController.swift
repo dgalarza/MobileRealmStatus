@@ -16,6 +16,7 @@ class RealmsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchResultsController = setupSearch()
+        definesPresentationContext = true
     }
 
     // MARK: - Table view data source
@@ -23,7 +24,7 @@ class RealmsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return realms.count
     }
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = realms[indexPath.row]

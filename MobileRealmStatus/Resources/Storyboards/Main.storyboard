@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Add-->
+        <!--Add Realm-->
         <scene sceneID="Bpi-E5-k3S">
             <objects>
                 <tableViewController id="tgZ-Li-UPb" customClass="RealmsTableViewController" customModule="MobileRealmStatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Add" id="Sxz-Gs-2X0"/>
+                    <navigationItem key="navigationItem" title="Add Realm" id="Sxz-Gs-2X0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VJ-uB-8LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

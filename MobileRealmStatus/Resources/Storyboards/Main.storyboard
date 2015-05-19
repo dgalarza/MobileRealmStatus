@@ -41,13 +41,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Add" id="Sxz-Gs-2X0">
-                        <barButtonItem key="rightBarButtonItem" image="Search" id="TX5-ua-QD2">
-                            <connections>
-                                <action selector="displaySearch:" destination="tgZ-Li-UPb" id="zpU-uB-Rde"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add" id="Sxz-Gs-2X0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VJ-uB-8LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +122,5 @@
     </scenes>
     <resources>
         <image name="Add" width="15" height="15"/>
-        <image name="Search" width="16" height="16"/>
     </resources>
 </document>

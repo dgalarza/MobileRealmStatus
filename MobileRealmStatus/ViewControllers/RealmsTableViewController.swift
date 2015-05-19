@@ -13,11 +13,6 @@ class RealmsTableViewController: UITableViewController {
         }
     }
 
-    @IBAction func displaySearch(sender: UIBarButtonItem) {
-        tableView.tableHeaderView = searchResultsController.searchBar
-        searchResultsController.searchBar.becomeFirstResponder()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         searchResultsController = setupSearch()
@@ -70,6 +65,7 @@ class RealmsTableViewController: UITableViewController {
 
         let searchBar = searchController.searchBar
         searchBar.sizeToFit()
+        tableView.tableHeaderView = searchBar
 
         return searchController
     }

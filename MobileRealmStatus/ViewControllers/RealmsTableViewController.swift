@@ -6,17 +6,13 @@ class RealmsTableViewController: UITableViewController {
 
     var favoriteRealmsController: FavoriteRealmsController?
     var searchResultsController = UISearchController()
-
-    var realms: [Realm] {
-        get {
-            return favoriteRealmsController.map { $0.realms } ?? []
-        }
-    }
+    var searchResultsUpdater: RealmSearchController?
+    var realms = [Realm]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        realms = favoriteRealmsController.map { $0.realms } ?? []
         searchResultsController = setupSearch()
-        definesPresentationContext = true
     }
 
     // MARK: - Table view data source
@@ -42,7 +38,6 @@ class RealmsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let favorites = FavoritesList.sharedFavoritesList
         let realm = realms[indexPath.row]
         let isFavorited = favoriteRealmsController >>- { $0.realmIsFavorited(realm) } ?? false
 
@@ -56,17 +51,22 @@ class RealmsTableViewController: UITableViewController {
     }
 
     private func setupSearch() -> UISearchController {
-        let resultsController = SearchResultsViewController()
-        resultsController.favoriteRealmsController = favoriteRealmsController
+        searchResultsUpdater = RealmSearchController(realms: realms, viewController: self)
 
-        let searchController = UISearchController(searchResultsController: resultsController)
-        searchController.searchResultsUpdater = resultsController
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = searchResultsUpdater
         searchController.dimsBackgroundDuringPresentation = false
 
-        let searchBar = searchController.searchBar
-        searchBar.sizeToFit()
-        tableView.tableHeaderView = searchBar
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
 
         return searchController
+    }
+}
+
+extension RealmsTableViewController: RealmsSearchDelegate {
+    func realmsFiltered(filteredRealms: [Realm]) {
+        realms = filteredRealms
+        tableView.reloadData()
     }
 }

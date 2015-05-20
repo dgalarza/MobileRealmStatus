@@ -4,6 +4,8 @@ import Runes
 class RealmsTableViewController: UITableViewController {
     private let cellIdentifier = "Realm"
 
+    @IBOutlet weak var searchBar: UISearchBar!
+
     var favoriteRealmsController: FavoriteRealmsController?
     var searchResultsController = UISearchController()
     var searchResultsUpdater: RealmSearchController?
@@ -12,7 +14,8 @@ class RealmsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         realms = favoriteRealmsController.map { $0.realms } ?? []
-        searchResultsController = setupSearch()
+        searchResultsUpdater = RealmSearchController(realms: realms, viewController: self)
+        searchBar.delegate = self
     }
 
     // MARK: - Table view data source
@@ -49,18 +52,23 @@ class RealmsTableViewController: UITableViewController {
 
         tableView.reloadData()
     }
+}
 
-    private func setupSearch() -> UISearchController {
-        searchResultsUpdater = RealmSearchController(realms: realms, viewController: self)
+extension RealmsTableViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        searchBar.showsCancelButton = true
+    }
 
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = searchResultsUpdater
-        searchController.dimsBackgroundDuringPresentation = false
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        searchResultsUpdater?.search(searchText)
+    }
 
-        searchController.searchBar.sizeToFit()
-        tableView.tableHeaderView = searchController.searchBar
-
-        return searchController
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 

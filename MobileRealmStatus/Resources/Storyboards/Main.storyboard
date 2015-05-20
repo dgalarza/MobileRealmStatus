@@ -12,6 +12,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Dxq-Mp-fY3">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Realm" textLabel="4L8-xb-tuS" detailTextLabel="pq3-85-9yH" rowHeight="77" style="IBUITableViewCellStyleSubtitle" id="TdD-3D-hJV" customClass="RealmCell" customModule="MobileRealmStatus" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -40,8 +45,11 @@
                             <outlet property="delegate" destination="tgZ-Li-UPb" id="tsx-PB-4iU"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Add Realm" id="Sxz-Gs-2X0"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Dxq-Mp-fY3" id="ave-VR-tQZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VJ-uB-8LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,8 +113,9 @@
         <scene sceneID="0S2-fK-td6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OPL-1d-ZQW" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAf-PY-hqF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MAf-PY-hqF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

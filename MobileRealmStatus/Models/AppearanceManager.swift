@@ -35,6 +35,5 @@ struct AppearanceManager {
         UISearchBar.appearance().backgroundColor = UIColor.backgroundGray()
         UISearchBar.appearance().barTintColor = UIColor.backgroundGray()
         UISearchBar.appearance().setBackgroundImage(UIImage(), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
-        UISearchBar.appearance().sizeToFit()
     }
 }

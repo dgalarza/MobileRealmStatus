@@ -12,4 +12,9 @@ extension UIFont {
         let preferredCaption = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
         return UIFont(name: applicationFont, size: preferredCaption.pointSize)
     }
+
+    static func bodyFont() -> UIFont? {
+        let preferredBody = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        return UIFont(name: applicationFont, size: preferredBody.pointSize)
+    }
 }

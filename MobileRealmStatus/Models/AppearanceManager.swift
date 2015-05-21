@@ -5,6 +5,7 @@ struct AppearanceManager {
         applyNavBarStyles()
         applyTableStyles()
         applySearchStyles()
+        applyButtonStyles()
     }
 
     static func customizeRealmCell(cell: RealmCell) {
@@ -35,5 +36,12 @@ struct AppearanceManager {
         UISearchBar.appearance().backgroundColor = UIColor.backgroundGray()
         UISearchBar.appearance().barTintColor = UIColor.backgroundGray()
         UISearchBar.appearance().setBackgroundImage(UIImage(), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
+    }
+
+    private static func applyButtonStyles() {
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont.bodyFont()!],
+            forState: UIControlState.Normal
+        )
     }
 }

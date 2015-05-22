@@ -23,11 +23,18 @@
 		22AFCBD71B10E49900D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBD81B10E4D300D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBDA1B10E4E900D6DD6B /* FakeFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */; };
+		22A9F9C01B0F6FB100E3D249 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
+		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
+		22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
+		22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
+		22A9F9C41B0F6FDD00E3D249 /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
+		22B00D101B0F6C9E00AD6A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */; };
 		22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
 		22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
 		22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
+		22CDD9C099C01FBA6493603B /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927A586E3F4C273D22EA1CCC /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22E649291B06415000578AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* RootViewController.swift */; };
 		22EA90FC1B1155B600C6889D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EA90FB1B1155B600C6889D /* Foundation.framework */; };
 		22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
@@ -37,6 +44,8 @@
 		22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
+		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
+		37DE5A2F83AE84BC864AB69D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E8282F0FB96961DFDAA2B7 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E24E3251A184795B15E78DD /* Settings.bundle */; };
 		776CA459777DEFA2608E9B08 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		954E670797EAA770040FA878 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50990241D522142C43DC00 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -110,6 +119,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				776CA459777DEFA2608E9B08 /* Pods_unit_tests.framework in Frameworks */,
+				22CDD9C099C01FBA6493603B /* Pods_unit_tests.framework in Frameworks */,
+				37DE5A2F83AE84BC864AB69D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +540,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		877D7B3B6407B29CE825915F /* Set version number */ = {
@@ -619,6 +630,17 @@
 				22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */,
 				22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */,
 				22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */,
+				22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */,
+				22A9F9C01B0F6FB100E3D249 /* AppearanceManager.swift in Sources */,
+				22A9F9C41B0F6FDD00E3D249 /* RealmCell.swift in Sources */,
+				22B00D101B0F6C9E00AD6A00 /* AppDelegate.swift in Sources */,
+				22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */,
+				22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */,
+				22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */,
+				22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */,
+				22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */,
+				22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */,
+				22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +660,7 @@
 			baseConfigurationReference = AD3B9C8EF21DB66811A30381 /* Pods-unit_tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobileRealmStatus.app/MobileRealmStatus";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -651,6 +674,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW-Realm-Tracker.app/WoW-Realm-Tracker";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -745,6 +769,7 @@
 			baseConfigurationReference = 52B0B1B7CB54DFA998A80EAB /* Pods-unit_tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobileRealmStatus.app/MobileRealmStatus";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

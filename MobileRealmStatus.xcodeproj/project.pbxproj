@@ -16,6 +16,8 @@
 		22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; };
 		229F1DBB1B064C470025CD7B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22A270A61B081D6900C28773 /* RealmsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A270A51B081D6900C28773 /* RealmsDelegate.swift */; };
+		22AFCBCF1B0FD46D00D6DD6B /* FavoritesListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */; };
+		22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
 		22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
@@ -55,6 +57,7 @@
 		22542EB51B0828F700145420 /* FavoriteRealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsController.swift; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22A270A51B081D6900C28773 /* RealmsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsDelegate.swift; sourceTree = "<group>"; };
+		22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesListSpec.swift; sourceTree = "<group>"; };
 		22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRealmsSearchDelegate.swift; sourceTree = "<group>"; };
 		22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmSearchControllerSpec.swift; path = Controllers/RealmSearchControllerSpec.swift; sourceTree = "<group>"; };
 		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,14 @@
 				22E649281B06415000578AFD /* RootViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		22AFCBCD1B0FD43300D6DD6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		22BBC1951B0F693200DE700D /* Fakes */ = {
@@ -252,6 +263,7 @@
 		835DA964BB3534961244F546 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				22AFCBCD1B0FD43300D6DD6B /* Models */,
 				22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */,
 				22BBC1961B0F696900DE700D /* Controllers */,
 			);
@@ -581,9 +593,11 @@
 			files = (
 				22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */,
 				22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */,
+				22AFCBCF1B0FD46D00D6DD6B /* FavoritesListSpec.swift in Sources */,
 				22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */,
 				22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */,
 				22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */,
+				22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

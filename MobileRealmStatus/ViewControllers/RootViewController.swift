@@ -14,6 +14,7 @@ class RootViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveRealms()
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {

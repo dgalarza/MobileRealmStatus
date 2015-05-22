@@ -92,7 +92,6 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Favorite Realms" id="8ao-0O-xl1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Txh-7U-10H"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="P7E-y8-gMP">
                             <connections>
                                 <segue destination="tgZ-Li-UPb" kind="show" id="3dD-BQ-M6u"/>

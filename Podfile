@@ -10,12 +10,10 @@ pod 'Argo'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'OCMock'
-  pod 'OHHTTPStubs'
+  pod 'Argo'
+  pod 'Quick'
+  pod 'Nimble', '~> 0.4.0'
 end
-
 
 # Copy acknowledgements to the Settings.bundle
 

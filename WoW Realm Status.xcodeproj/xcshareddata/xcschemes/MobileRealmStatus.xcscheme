@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEFC7453D4D23BF52EAC2D74"
-               BuildableName = "MobileRealmStatus.app"
-               BlueprintName = "MobileRealmStatus"
-               ReferencedContainer = "container:MobileRealmStatus.xcodeproj">
+               BuildableName = "WoW Realm Status.app"
+               BlueprintName = "WoW Realm Status"
+               ReferencedContainer = "container:WoW Realm Status.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "5B36AF02D502EA333DFCAF3C"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
-               ReferencedContainer = "container:MobileRealmStatus.xcodeproj">
+               ReferencedContainer = "container:WoW Realm Status.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEFC7453D4D23BF52EAC2D74"
-            BuildableName = "MobileRealmStatus.app"
-            BlueprintName = "MobileRealmStatus"
-            ReferencedContainer = "container:MobileRealmStatus.xcodeproj">
+            BuildableName = "WoW Realm Status.app"
+            BlueprintName = "WoW Realm Status"
+            ReferencedContainer = "container:WoW Realm Status.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEFC7453D4D23BF52EAC2D74"
-            BuildableName = "MobileRealmStatus.app"
-            BlueprintName = "MobileRealmStatus"
-            ReferencedContainer = "container:MobileRealmStatus.xcodeproj">
+            BuildableName = "WoW Realm Status.app"
+            BlueprintName = "WoW Realm Status"
+            ReferencedContainer = "container:WoW Realm Status.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEFC7453D4D23BF52EAC2D74"
-            BuildableName = "MobileRealmStatus.app"
-            BlueprintName = "MobileRealmStatus"
-            ReferencedContainer = "container:MobileRealmStatus.xcodeproj">
+            BuildableName = "WoW Realm Status.app"
+            BlueprintName = "WoW Realm Status"
+            ReferencedContainer = "container:WoW Realm Status.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -78,7 +78,7 @@
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		398AC603BA841D7117001F7F /* MobileRealmStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileRealmStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		398AC603BA841D7117001F7F /* WoW Realm Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW Realm Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E24E3251A184795B15E78DD /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		52B0B1B7CB54DFA998A80EAB /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		989B21C2E19A16FBE8218426 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,7 +319,7 @@
 		BDD58F7B903577AE92EB5706 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				398AC603BA841D7117001F7F /* MobileRealmStatus.app */,
+				398AC603BA841D7117001F7F /* WoW Realm Status.app */,
 				989B21C2E19A16FBE8218426 /* UnitTests.xctest */,
 			);
 			name = Products;
@@ -377,9 +377,9 @@
 			productReference = 989B21C2E19A16FBE8218426 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DEFC7453D4D23BF52EAC2D74 /* MobileRealmStatus */ = {
+		DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "MobileRealmStatus" */;
+			buildConfigurationList = 49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW Realm Status" */;
 			buildPhases = (
 				7D6A143BE73DA39B8DBD892F /* Check Pods Manifest.lock */,
 				32F8C4478C408097422AB12E /* Sources */,
@@ -394,9 +394,9 @@
 			);
 			dependencies = (
 			);
-			name = MobileRealmStatus;
+			name = "WoW Realm Status";
 			productName = MobileRealmStatus;
-			productReference = 398AC603BA841D7117001F7F /* MobileRealmStatus.app */;
+			productReference = 398AC603BA841D7117001F7F /* WoW Realm Status.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -414,7 +414,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "MobileRealmStatus" */;
+			buildConfigurationList = 8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW Realm Status" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -426,7 +426,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEFC7453D4D23BF52EAC2D74 /* MobileRealmStatus */,
+				DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */,
 				5B36AF02D502EA333DFCAF3C /* UnitTests */,
 			);
 		};
@@ -622,7 +622,7 @@
 /* Begin PBXTargetDependency section */
 		1BF49E01B33A6C26DDA70B38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEFC7453D4D23BF52EAC2D74 /* MobileRealmStatus */;
+			target = DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */;
 			targetProxy = 07878A530516F9482F4A1A19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -726,7 +726,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WoW Realm Status";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -823,7 +823,7 @@
 				INFOPLIST_FILE = "MobileRealmStatus/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WoW Realm Status";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -833,7 +833,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "MobileRealmStatus" */ = {
+		49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW Realm Status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA0F8B127DB935FA5E40BCB5 /* Release */,
@@ -842,7 +842,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "MobileRealmStatus" */ = {
+		8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW Realm Status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75D1F9DDA56649AEC57DBD0B /* Debug */,

@@ -1,27 +1,27 @@
 struct FavoriteRealmsController {
-    private let favoritesList: FavoritesList
+    private let favoritesManager: FavoritesManager
     let realms: [Realm]
 
-    init(realms: [Realm]) {
+    init(realms: [Realm], favoritesManager: FavoritesManager? = nil) {
         self.realms = realms
-        favoritesList = FavoritesList.sharedFavoritesList
+        self.favoritesManager = favoritesManager.map { $0 } ?? FavoritesList.sharedFavoritesList
     }
 
     var favoriteRealms: [Realm] {
         get {
-            return realms.filter { contains(self.favoritesList.favorites, $0.name) }
+            return realms.filter { contains(self.favoritesManager.favorites, $0.name) }
         }
     }
 
     func addFavorite(realm: Realm) {
-        favoritesList.addFavorite(realm.name)
+        favoritesManager.addFavorite(realm.name)
     }
 
     func unfavorite(realm: Realm) {
-        favoritesList.removeFavorite(realm.name)
+        favoritesManager.removeFavorite(realm.name)
     }
 
     func realmIsFavorited(realm: Realm) -> Bool {
-        return contains(favoritesList.favorites, realm.name)
+        return contains(favoritesManager.favorites, realm.name)
     }
 }

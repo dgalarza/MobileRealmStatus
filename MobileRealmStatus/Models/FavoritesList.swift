@@ -1,6 +1,6 @@
 import UIKit
 
-class FavoritesList {
+class FavoritesList: FavoritesManager {
     class var sharedFavoritesList : FavoritesList {
         struct Singleton {
             static let instance = FavoritesList()

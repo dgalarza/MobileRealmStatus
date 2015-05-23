@@ -17,6 +17,11 @@ class FavoritesListSpec: QuickSpec {
     }
 
     override func spec() {
+        beforeEach {
+            self.defaults.setObject([], forKey: favoritesDefaultsKey)
+            self.defaults.synchronize()
+        }
+
         afterEach {
             self.defaults.setObject([], forKey: favoritesDefaultsKey)
             self.defaults.synchronize()
@@ -32,12 +37,15 @@ class FavoritesListSpec: QuickSpec {
 
         describe("removeFavorite") {
             it("removes the given favorite from the favorites list") {
-                self.defaults.setObject(["Arthas"], forKey: favoritesDefaultsKey)
-                self.defaults.synchronize()
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setObject(["Arthas"], forKey: favoritesDefaultsKey)
+                defaults.synchronize()
 
                 FavoritesList.sharedFavoritesList.removeFavorite("Arthas")
 
-                expect(self.favorites).notTo(contain("Arthas"))
+                defaults.synchronize()
+                let favorites = defaults.objectForKey(favoritesDefaultsKey) as! [String]
+                expect(favorites).notTo(contain("Arthas"))
             }
         }
     }

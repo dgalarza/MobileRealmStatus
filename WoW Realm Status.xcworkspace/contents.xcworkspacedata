@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Volumes/Data/Users/dgalarza/Projects/MobileRealmStatus/WoW Realm Status.xcodeproj">
+      location = "group:WoW Realm Status.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

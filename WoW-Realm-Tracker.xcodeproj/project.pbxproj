@@ -29,6 +29,7 @@
 		22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
 		22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
 		22E649291B06415000578AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* RootViewController.swift */; };
+		22EA90FC1B1155B600C6889D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EA90FB1B1155B600C6889D /* Foundation.framework */; };
 		22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
 		22F5B6E71B084305008ED648 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
 		22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
@@ -36,7 +37,6 @@
 		22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
-		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
 		5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E24E3251A184795B15E78DD /* Settings.bundle */; };
 		776CA459777DEFA2608E9B08 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		954E670797EAA770040FA878 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50990241D522142C43DC00 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -69,6 +69,7 @@
 		22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRealmsSearchDelegate.swift; sourceTree = "<group>"; };
 		22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmSearchControllerSpec.swift; path = Controllers/RealmSearchControllerSpec.swift; sourceTree = "<group>"; };
 		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		22EA90FB1B1155B600C6889D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22F5B6E41B08427E008ED648 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		22F5B6E61B084305008ED648 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		22F5B6E81B084F65008ED648 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
@@ -78,7 +79,7 @@
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		398AC603BA841D7117001F7F /* WoW Realm Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW Realm Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW-Realm-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E24E3251A184795B15E78DD /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		52B0B1B7CB54DFA998A80EAB /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		989B21C2E19A16FBE8218426 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */,
+				22EA90FC1B1155B600C6889D /* Foundation.framework in Frameworks */,
 				954E670797EAA770040FA878 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +240,7 @@
 		73A5FEB5FC06CC60AE4B386E = {
 			isa = PBXGroup;
 			children = (
-				F6222C0B871422E808E3A467 /* MobileRealmStatus */,
+				F6222C0B871422E808E3A467 /* WoW-Realm-Tracker */,
 				0BEC3C3953ABFC63289822F1 /* UnitTests */,
 				A41A601B088521C309710449 /* Frameworks */,
 				BDD58F7B903577AE92EB5706 /* Products */,
@@ -309,6 +310,7 @@
 		A41A601B088521C309710449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22EA90FB1B1155B600C6889D /* Foundation.framework */,
 				9B0DA0FCAC33A68F292255EB /* iOS */,
 				CB50990241D522142C43DC00 /* Pods.framework */,
 				37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */,
@@ -319,13 +321,13 @@
 		BDD58F7B903577AE92EB5706 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				398AC603BA841D7117001F7F /* WoW Realm Status.app */,
+				398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */,
 				989B21C2E19A16FBE8218426 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6222C0B871422E808E3A467 /* MobileRealmStatus */ = {
+		F6222C0B871422E808E3A467 /* WoW-Realm-Tracker */ = {
 			isa = PBXGroup;
 			children = (
 				2215F1E41B081C8E00505FCD /* ViewControllers */,
@@ -338,7 +340,7 @@
 				62A5D87A88931DC8B8D20A47 /* Views */,
 				F8B173056C55D4A5CDF5CCF7 /* Resources */,
 			);
-			path = MobileRealmStatus;
+			path = "WoW-Realm-Tracker";
 			sourceTree = "<group>";
 		};
 		F8B173056C55D4A5CDF5CCF7 /* Resources */ = {
@@ -377,9 +379,9 @@
 			productReference = 989B21C2E19A16FBE8218426 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */ = {
+		DEFC7453D4D23BF52EAC2D74 /* WoW-Realm-Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW Realm Status" */;
+			buildConfigurationList = 49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker" */;
 			buildPhases = (
 				7D6A143BE73DA39B8DBD892F /* Check Pods Manifest.lock */,
 				32F8C4478C408097422AB12E /* Sources */,
@@ -394,9 +396,9 @@
 			);
 			dependencies = (
 			);
-			name = "WoW Realm Status";
+			name = "WoW-Realm-Tracker";
 			productName = MobileRealmStatus;
-			productReference = 398AC603BA841D7117001F7F /* WoW Realm Status.app */;
+			productReference = 398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -417,7 +419,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW Realm Status" */;
+			buildConfigurationList = 8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW-Realm-Tracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -429,7 +431,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */,
+				DEFC7453D4D23BF52EAC2D74 /* WoW-Realm-Tracker */,
 				5B36AF02D502EA333DFCAF3C /* UnitTests */,
 			);
 		};
@@ -625,7 +627,7 @@
 /* Begin PBXTargetDependency section */
 		1BF49E01B33A6C26DDA70B38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEFC7453D4D23BF52EAC2D74 /* WoW Realm Status */;
+			target = DEFC7453D4D23BF52EAC2D74 /* WoW-Realm-Tracker */;
 			targetProxy = 07878A530516F9482F4A1A19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -648,7 +650,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW Realm Status.app/WoW Realm Status";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW-Realm-Tracker.app/WoW-Realm-Tracker";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -718,8 +720,9 @@
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "MobileRealmStatus/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WoW-Realm-Tracker/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -729,7 +732,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "WoW Realm Status";
+				PRODUCT_NAME = "WoW-Realm-Tracker";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -753,7 +756,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW Realm Status.app/WoW Realm Status";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW-Realm-Tracker.app/WoW-Realm-Tracker";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -823,10 +826,11 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "MobileRealmStatus/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WoW-Realm-Tracker/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "WoW Realm Status";
+				PRODUCT_NAME = "WoW-Realm-Tracker";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -836,7 +840,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW Realm Status" */ = {
+		49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA0F8B127DB935FA5E40BCB5 /* Release */,
@@ -845,7 +849,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW Realm Status" */ = {
+		8935B59F7BC14D1B656CC226 /* Build configuration list for PBXProject "WoW-Realm-Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75D1F9DDA56649AEC57DBD0B /* Debug */,

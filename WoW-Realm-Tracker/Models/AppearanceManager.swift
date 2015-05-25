@@ -14,13 +14,13 @@ struct AppearanceManager {
     }
 
     private static func applyNavBarStyles() {
-        let navigationBarAppearnce = UINavigationBar.appearance()
-        navigationBarAppearnce.barTintColor = UIColor.backgroundGray()
-        navigationBarAppearnce.backgroundColor = UIColor.backgroundGray()
-        navigationBarAppearnce.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        navigationBarAppearnce.shadowImage = UIImage()
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.barTintColor = UIColor.backgroundGray()
+        navigationBarAppearance.backgroundColor = UIColor.backgroundGray()
+        navigationBarAppearance.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationBarAppearance.shadowImage = UIImage()
 
-        navigationBarAppearnce.titleTextAttributes = [
+        navigationBarAppearance.titleTextAttributes = [
             NSFontAttributeName: UIFont.headlineFont()!,
             NSForegroundColorAttributeName:UIColor.captionGray()
         ]

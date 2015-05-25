@@ -1,5 +1,8 @@
 # MobileRealmStatus #
 
+## Trello ##
+https://trello.com/b/sDPxD15l/mobile-realm-status
+
 ## Setup ##
 
 Run `bin/setup`
@@ -7,7 +10,7 @@ Run `bin/setup`
 This will:
 
  - Install the gem dependencies
- - Install the pod dependencies
+ - Install the carthage dependencies
 
 ## Testing ##
 

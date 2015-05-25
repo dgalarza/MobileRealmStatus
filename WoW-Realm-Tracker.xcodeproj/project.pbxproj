@@ -9,13 +9,30 @@
 /* Begin PBXBuildFile section */
 		0A7535F5F27E621A6659354A /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; };
 		10316F86452F2FBCAB95DA31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB33AC4B689E2E3FC87C7696 /* Images.xcassets */; };
+		220570741B12ABB200ADE4B3 /* Nimble.framework in Carthage Copy Files */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		220570751B12ABB800ADE4B3 /* Quick.framework in Carthage Copy Files */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220DCFCE1AF8618F000022EC /* RealmsApi.swift */; };
 		221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		2215F1E61B081CBB00505FCD /* RealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E51B081CBB00505FCD /* RealmsController.swift */; };
 		22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; };
+		227DCF151B12AA1A00BCE33A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
+		227DCF161B12AA1A00BCE33A /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF131B12AA1A00BCE33A /* Box.framework */; };
+		227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF141B12AA1A00BCE33A /* Runes.framework */; };
+		227DCF1C1B12AA8200BCE33A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; };
+		227DCF1D1B12AA8200BCE33A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; };
+		227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
+		227DCF1F1B12AA9900BCE33A /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
+		227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
+		227DCF211B12AA9900BCE33A /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
+		227DCF221B12AA9900BCE33A /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
 		229F1DBB1B064C470025CD7B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22A270A61B081D6900C28773 /* RealmsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A270A51B081D6900C28773 /* RealmsDelegate.swift */; };
+		22A9F9C01B0F6FB100E3D249 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
+		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
+		22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
+		22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
+		22A9F9C41B0F6FDD00E3D249 /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		22AFCBCF1B0FD46D00D6DD6B /* FavoritesListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */; };
 		22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22AFCBD41B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD31B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift */; };
@@ -23,19 +40,8 @@
 		22AFCBD71B10E49900D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBD81B10E4D300D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBDA1B10E4E900D6DD6B /* FakeFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */; };
-		22A9F9C01B0F6FB100E3D249 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
-		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
-		22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
-		22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
-		22A9F9C41B0F6FDD00E3D249 /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		22B00D101B0F6C9E00AD6A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */; };
-		22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
-		22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
-		22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
-		22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
-		22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
 		22E649291B06415000578AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* RootViewController.swift */; };
-		22EA90FC1B1155B600C6889D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EA90FB1B1155B600C6889D /* Foundation.framework */; };
 		22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
 		22F5B6E71B084305008ED648 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
 		22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
@@ -45,8 +51,6 @@
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
 		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
 		5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E24E3251A184795B15E78DD /* Settings.bundle */; };
-		776CA459777DEFA2608E9B08 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		954E670797EAA770040FA878 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50990241D522142C43DC00 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */; };
 		C750CCFEE2EAB2985A44F9B9 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA45A1DE3A32AB0568A67266 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
@@ -61,12 +65,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		220570731B12ABA000ADE4B3 /* Carthage Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				220570751B12ABB800ADE4B3 /* Quick.framework in Carthage Copy Files */,
+				220570741B12ABB200ADE4B3 /* Nimble.framework in Carthage Copy Files */,
+			);
+			name = "Carthage Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		220DCFCE1AF8618F000022EC /* RealmsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsApi.swift; sourceTree = "<group>"; };
 		221285CC1B097A7E002FA5B5 /* UIfont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIfont.swift; sourceTree = "<group>"; };
 		2215F1E21B06E9CC00505FCD /* RealmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
 		2215F1E51B081CBB00505FCD /* RealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsController.swift; sourceTree = "<group>"; };
 		22542EB51B0828F700145420 /* FavoriteRealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsController.swift; sourceTree = "<group>"; };
+		227DCF121B12AA1A00BCE33A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		227DCF131B12AA1A00BCE33A /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		227DCF141B12AA1A00BCE33A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		227DCF1A1B12AA8200BCE33A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		227DCF1B1B12AA8200BCE33A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22A270A51B081D6900C28773 /* RealmsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsDelegate.swift; sourceTree = "<group>"; };
 		22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesListSpec.swift; sourceTree = "<group>"; };
@@ -76,7 +100,6 @@
 		22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRealmsSearchDelegate.swift; sourceTree = "<group>"; };
 		22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmSearchControllerSpec.swift; path = Controllers/RealmSearchControllerSpec.swift; sourceTree = "<group>"; };
 		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		22EA90FB1B1155B600C6889D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22F5B6E41B08427E008ED648 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		22F5B6E61B084305008ED648 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		22F5B6E81B084F65008ED648 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
@@ -85,15 +108,12 @@
 		22F5DFBA1AF86043002F37B1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
-		37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW-Realm-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E24E3251A184795B15E78DD /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		52B0B1B7CB54DFA998A80EAB /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		989B21C2E19A16FBE8218426 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA45A1DE3A32AB0568A67266 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		AD86D0AEB85DAE73D0513B18 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CB33AC4B689E2E3FC87C7696 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CB50990241D522142C43DC00 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE923D29C976A7A3A88BC202 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +124,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EA90FC1B1155B600C6889D /* Foundation.framework in Frameworks */,
-				954E670797EAA770040FA878 /* Pods.framework in Frameworks */,
 				32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */,
+				227DCF151B12AA1A00BCE33A /* Argo.framework in Frameworks */,
+				227DCF161B12AA1A00BCE33A /* Box.framework in Frameworks */,
+				227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				776CA459777DEFA2608E9B08 /* Pods_unit_tests.framework in Frameworks */,
-				22CDD9C099C01FBA6493603B /* Pods_unit_tests.framework in Frameworks */,
-				37DE5A2F83AE84BC864AB69D /* Pods.framework in Frameworks */,
+				227DCF1C1B12AA8200BCE33A /* Nimble.framework in Frameworks */,
+				227DCF1D1B12AA8200BCE33A /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +325,12 @@
 		A41A601B088521C309710449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				22EA90FB1B1155B600C6889D /* Foundation.framework */,
+				227DCF1A1B12AA8200BCE33A /* Nimble.framework */,
+				227DCF1B1B12AA8200BCE33A /* Quick.framework */,
+				227DCF121B12AA1A00BCE33A /* Argo.framework */,
+				227DCF131B12AA1A00BCE33A /* Box.framework */,
+				227DCF141B12AA1A00BCE33A /* Runes.framework */,
 				9B0DA0FCAC33A68F292255EB /* iOS */,
-				CB50990241D522142C43DC00 /* Pods.framework */,
-				37A3217898C2F2BF96EC2CE6 /* Pods_unit_tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,12 +379,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4ADE3785DB9F2D987B60E9C /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
-				CDAFDC7B19C046AC756E22F7 /* Check Pods Manifest.lock */,
 				95E4E8C4C11EB4B96B3D4537 /* Sources */,
 				CA6B7F9A54EFA947F4D6FCE0 /* Frameworks */,
 				7C2CB89CE26C78525C1976AE /* Resources */,
-				2B4F0108B03F05DE323CDFD1 /* Copy Pods Resources */,
-				8103802C04FCAB6BFBF79DDF /* Embed Pods Frameworks */,
+				220570731B12ABA000ADE4B3 /* Carthage Copy Files */,
 			);
 			buildRules = (
 			);
@@ -382,7 +402,7 @@
 				169F4E0582489B275D712CAF /* Frameworks */,
 				666C10C0E488E025CA19D858 /* Resources */,
 				EA98BCF702D0E453CAADB6FD /* Warn for TODO and FIXME comments */,
-				877D7B3B6407B29CE825915F /* Set version number */,
+				227DCF191B12AA3C00BCE33A /* Carthage run script */,
 			);
 			buildRules = (
 			);
@@ -400,14 +420,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = dgalarza;
 				TargetAttributes = {
 					5B36AF02D502EA333DFCAF3C = {
 						TestTargetID = DEFC7453D4D23BF52EAC2D74;
-					};
-					DEFC7453D4D23BF52EAC2D74 = {
-						DevelopmentTeam = 25S894MLT3;
 					};
 				};
 			};
@@ -449,64 +466,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B4F0108B03F05DE323CDFD1 /* Copy Pods Resources */ = {
+		227DCF191B12AA3C00BCE33A /* Carthage run script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
 			);
-			name = "Copy Pods Resources";
+			name = "Carthage run script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8103802C04FCAB6BFBF79DDF /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		877D7B3B6407B29CE825915F /* Set version number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Set version number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "git=$(sh /etc/profile; which git)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\nnumber_of_commits=$(\"$git\" rev-list master | wc -l | tr -d ' ')\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n  if [ -f \"$plist\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n  fi\ndone\n";
-		};
-		CDAFDC7B19C046AC756E22F7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		EA98BCF702D0E453CAADB6FD /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -520,7 +495,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"swift|h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"swift|h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -o -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -558,24 +533,19 @@
 				22AFCBDA1B10E4E900D6DD6B /* FakeFavoritesManager.swift in Sources */,
 				22AFCBD41B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift in Sources */,
 				22AFCBD81B10E4D300D6DD6B /* FavoritesManager.swift in Sources */,
-				22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */,
+				227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */,
 				22AFCBD51B0FDAAE00D6DD6B /* FavoriteRealmsController.swift in Sources */,
-				22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */,
+				227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */,
 				22AFCBCF1B0FD46D00D6DD6B /* FavoritesListSpec.swift in Sources */,
-				22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */,
-				22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */,
-				22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */,
+				227DCF221B12AA9900BCE33A /* RealmsSearchDelegate.swift in Sources */,
+				227DCF211B12AA9900BCE33A /* Realm.swift in Sources */,
+				227DCF1F1B12AA9900BCE33A /* RealmSearchController.swift in Sources */,
 				22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */,
 				22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */,
 				22A9F9C01B0F6FB100E3D249 /* AppearanceManager.swift in Sources */,
 				22A9F9C41B0F6FDD00E3D249 /* RealmCell.swift in Sources */,
 				22B00D101B0F6C9E00AD6A00 /* AppDelegate.swift in Sources */,
-				22BBC19A1B0F69A900DE700D /* RealmSearchControllerSpec.swift in Sources */,
-				22BBC1981B0F699900DE700D /* FakeRealmsSearchDelegate.swift in Sources */,
 				22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */,
-				22B00D121B0F6CDE00AD6A00 /* RealmsSearchDelegate.swift in Sources */,
-				22B00D111B0F6CD700AD6A00 /* Realm.swift in Sources */,
-				22B00D131B0F6CE500AD6A00 /* RealmSearchController.swift in Sources */,
 				22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,12 +565,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobileRealmStatus.app/MobileRealmStatus";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -609,7 +579,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WoW-Realm-Tracker.app/WoW-Realm-Tracker";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -661,6 +630,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Applications;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -676,10 +646,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WoW-Realm-Tracker/Resources/Other-Sources/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				INSTALL_PATH = /Applications;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -702,12 +676,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobileRealmStatus.app/MobileRealmStatus";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -760,6 +734,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Applications;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -775,6 +750,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -784,7 +763,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/WoW-Realm-Tracker/Resources/Other-Sources/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				INSTALL_PATH = /Applications;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "WoW-Realm-Tracker";

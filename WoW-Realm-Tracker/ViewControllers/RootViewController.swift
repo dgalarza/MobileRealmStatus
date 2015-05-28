@@ -7,7 +7,7 @@ class RootViewController: UITableViewController {
 
     private var favoriteRealms: [Realm] {
         get {
-            return favoriteRealmsController >>- { $0.favoriteRealms } ?? []
+            return (favoriteRealmsController >>- { $0.favoriteRealms }) ?? []
         }
     }
 

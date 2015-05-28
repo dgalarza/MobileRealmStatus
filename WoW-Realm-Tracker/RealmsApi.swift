@@ -18,7 +18,7 @@ struct RealmsApi {
         let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: nil)
 
         if let j: AnyObject = json {
-            let realms: [Realm] = j["realms"] >>- decode ?? []
+            let realms: [Realm] = (j["realms"] >>- decode) ?? []
             dispatch_async(dispatch_get_main_queue()) { callback(realms) }
         }
     }

@@ -27,15 +27,8 @@ class RealmsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = realms[indexPath.row]
-        let isFavorited = (favoriteRealmsController >>- { $0.realmIsFavorited(realm) }) ?? false
 
-        cell.viewModel = realm
-
-        if isFavorited {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
+        cell.viewModel = RealmViewModel(realm: realm, favoritesController: favoriteRealmsController!)
 
         return cell
     }

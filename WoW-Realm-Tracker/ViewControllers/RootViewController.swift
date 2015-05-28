@@ -38,7 +38,7 @@ class RootViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = favoriteRealms[indexPath.row]
 
-        cell.viewModel = realm
+        cell.viewModel = RealmViewModel(realm: realm, favoritesController: favoriteRealmsController!)
         cell.includeStatusImage()
 
         return cell

@@ -15,14 +15,14 @@ class RealmCell: UITableViewCell {
         configureStyles()
     }
 
-    var viewModel: Realm? {
+    var viewModel: RealmViewModel? {
         didSet {
             update()
         }
     }
 
     func includeStatusImage() {
-        imageView?.image = UIImage(named: "Available")
+        viewModel.map { imageView?.image = UIImage(named: $0.availabilityImage) }
     }
 
     private func configureStyles() {
@@ -32,8 +32,11 @@ class RealmCell: UITableViewCell {
     }
 
     private func update() {
-        textLabel?.text = viewModel?.name
-
-        viewModel.map { detailTextLabel?.text = "Realm Type \($0.displayType())" }
+        if let viewModel = self.viewModel {
+            let favoritedImage = UIImage(named: viewModel.favoritedImage)
+            accessoryView = UIImageView(image: favoritedImage)
+            textLabel?.text = viewModel.name
+            detailTextLabel?.text = "Realm Type \(viewModel.type)"
+        }
     }
 }

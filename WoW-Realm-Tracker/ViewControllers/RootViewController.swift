@@ -13,7 +13,7 @@ class RootViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.show()
+        SVProgressHUD.showWithMaskType(.Clear)
         retrieveRealms()
         navigationItem.leftBarButtonItem = editButtonItem()
     }

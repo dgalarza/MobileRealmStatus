@@ -13,6 +13,7 @@ class RootViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show()
         retrieveRealms()
         navigationItem.leftBarButtonItem = editButtonItem()
     }
@@ -57,8 +58,6 @@ class RootViewController: UITableViewController {
     }
 
     private func retrieveRealms() {
-        refreshControl?.beginRefreshing()
-
         let realmsController = RealmsController(realmsDelegate: self)
         realmsController.retrieveRealms()
     }
@@ -69,5 +68,6 @@ extension RootViewController: RealmsDelegate {
         favoriteRealmsController = FavoriteRealmsController(realms: realms)
         refreshControl?.endRefreshing()
         tableView.reloadData()
+        SVProgressHUD.dismiss()
     }
 }

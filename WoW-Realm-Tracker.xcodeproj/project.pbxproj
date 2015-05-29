@@ -38,6 +38,7 @@
 		22AFCBD71B10E49900D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBD81B10E4D300D6DD6B /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
 		22AFCBDA1B10E4E900D6DD6B /* FakeFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */; };
+		22BD75C31B17F6B800AB8E8D /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD75C21B17F6B800AB8E8D /* SVProgressHUD.framework */; };
 		22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E645C21B16B9640023931E /* RealmViewModel.swift */; };
 		22E645C61B16BF080023931E /* RealmViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E645C51B16BF080023931E /* RealmViewModelSpec.swift */; };
 		22E645C71B16BF580023931E /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E645C21B16B9640023931E /* RealmViewModel.swift */; };
@@ -99,6 +100,8 @@
 		22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFavoritesManager.swift; sourceTree = "<group>"; };
 		22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRealmsSearchDelegate.swift; sourceTree = "<group>"; };
 		22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmSearchControllerSpec.swift; path = Controllers/RealmSearchControllerSpec.swift; sourceTree = "<group>"; };
+		22BD75C21B17F6B800AB8E8D /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		22BD75C51B17F72700AB8E8D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		22E645C21B16B9640023931E /* RealmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmViewModel.swift; sourceTree = "<group>"; };
 		22E645C51B16BF080023931E /* RealmViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmViewModelSpec.swift; sourceTree = "<group>"; };
 		22E649281B06415000578AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */,
 				227DCF151B12AA1A00BCE33A /* Argo.framework in Frameworks */,
 				227DCF161B12AA1A00BCE33A /* Box.framework in Frameworks */,
+				22BD75C31B17F6B800AB8E8D /* SVProgressHUD.framework in Frameworks */,
 				227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				DE923D29C976A7A3A88BC202 /* Info.plist */,
+				22BD75C51B17F72700AB8E8D /* Bridging-Header.h */,
 			);
 			path = "Other-Sources";
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 		A41A601B088521C309710449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22BD75C21B17F6B800AB8E8D /* SVProgressHUD.framework */,
 				227DCF1A1B12AA8200BCE33A /* Nimble.framework */,
 				227DCF1B1B12AA8200BCE33A /* Quick.framework */,
 				227DCF121B12AA1A00BCE33A /* Argo.framework */,
@@ -487,6 +493,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			name = "Carthage run script";
 			outputPaths = (
@@ -680,6 +687,7 @@
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WoW-Realm-Tracker/Resources/Other-Sources/Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -782,6 +790,7 @@
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "WoW-Realm-Tracker/Resources/Other-Sources/Bridging-Header.h";
 			};
 			name = Debug;
 		};

@@ -6,6 +6,7 @@ struct AppearanceManager {
         applyTableStyles()
         applySearchStyles()
         applyButtonStyles()
+        applySVProgressHUDStyles()
     }
 
     static func customizeRealmCell(cell: RealmCell) {
@@ -46,5 +47,10 @@ struct AppearanceManager {
             [NSFontAttributeName: UIFont.bodyFont()!],
             forState: UIControlState.Normal
         )
+    }
+
+    private static func applySVProgressHUDStyles() {
+        SVProgressHUD.setBackgroundColor(UIColor.clearColor())
+        SVProgressHUD.setForegroundColor(UIColor.captionGray())
     }
 }

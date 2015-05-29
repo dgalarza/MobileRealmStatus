@@ -29,8 +29,10 @@ struct AppearanceManager {
     private static func applyTableStyles() {
         UITableView.appearance().backgroundColor = UIColor.backgroundGray()
         UITableView.appearance().separatorColor = UIColor.clearColor()
+
         RealmCell.appearance().selectionStyle = .None
         RealmCell.appearance().backgroundColor = UIColor.backgroundGray()
+        RealmCell.appearance().tintColor = UIColor.clearColor()
     }
 
     private static func applySearchStyles() {

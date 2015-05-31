@@ -16,6 +16,10 @@ struct RealmSearchController {
         viewController.realmsFiltered(filteredRealms)
     }
 
+    func clear() {
+        viewController.realmsFiltered(realms)
+    }
+
     private func filterRealms(term: String) -> [Realm] {
         let predicate = NSPredicate(format: "self CONTAINS[c] %@", term)
         return realms.filter { predicate.evaluateWithObject($0.name) }

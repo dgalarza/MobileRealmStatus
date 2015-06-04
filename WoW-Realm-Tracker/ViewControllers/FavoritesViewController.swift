@@ -1,7 +1,7 @@
 import UIKit
 import Runes
 
-class RootViewController: UITableViewController {
+class FavoritesViewController: UITableViewController {
     private let cellIdentifier = "Realm"
     private var favoriteRealmsController: FavoriteRealmsController?
 
@@ -63,7 +63,7 @@ class RootViewController: UITableViewController {
     }
 }
 
-extension RootViewController: RealmsDelegate {
+extension FavoritesViewController: RealmsDelegate {
     func receivedRealms(realms: [Realm]) {
         favoriteRealmsController = FavoriteRealmsController(realms: realms)
         refreshControl?.endRefreshing()

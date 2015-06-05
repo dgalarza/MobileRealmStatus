@@ -1,23 +1,32 @@
-import Foundation
+import UIKit
 
-struct RealmSearchController {
+class RealmSearchController: NSObject {
     let realms: [Realm]
-    let viewController: RealmsSearchDelegate
+    let searchDelegate: RealmsSearchDelegate
 
-    func search(searchTerm: String) {
-        let filteredRealms: [Realm]
-
-        if searchTerm.isEmpty {
-            filteredRealms = realms
-        } else {
-            filteredRealms = filterRealms(searchTerm)
-        }
-
-        viewController.realmsFiltered(filteredRealms)
+    init(realms: [Realm], searchDelegate: RealmsSearchDelegate) {
+        self.searchDelegate = searchDelegate
+        self.realms = realms
     }
 
     private func filterRealms(term: String) -> [Realm] {
         let predicate = NSPredicate(format: "self CONTAINS[c] %@", term)
         return realms.filter { predicate.evaluateWithObject($0.name) }
+    }
+}
+
+extension RealmSearchController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let term = searchController.searchBar.text
+        let filteredRealms: [Realm]
+        println("term: \(term)")
+
+        if term.isEmpty {
+            filteredRealms = realms
+        } else {
+            filteredRealms = filterRealms(term)
+        }
+
+        searchDelegate.realmsFiltered(filteredRealms)
     }
 }

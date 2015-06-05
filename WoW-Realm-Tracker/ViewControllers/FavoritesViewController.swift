@@ -16,6 +16,16 @@ class FavoritesViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem()
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.translucent = false
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.translucent = true
+    }
+
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
         toggleEmptyState()

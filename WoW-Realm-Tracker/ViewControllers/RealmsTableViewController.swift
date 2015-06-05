@@ -7,15 +7,33 @@ class RealmsTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
 
     var favoriteRealmsController: FavoriteRealmsController?
-    var searchResultsController = UISearchController()
+    var searchResultsController: UISearchController?
     var searchResultsUpdater: RealmSearchController?
     var realms = [Realm]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         realms = favoriteRealmsController.map { $0.realms } ?? []
-        searchResultsUpdater = RealmSearchController(realms: realms, viewController: self)
-        searchBar.delegate = self
+        searchResultsUpdater = RealmSearchController(realms: realms, searchDelegate: self)
+
+        searchResultsController = UISearchController(searchResultsController: nil)
+        searchResultsController?.dimsBackgroundDuringPresentation = false
+        searchResultsController?.searchResultsUpdater = searchResultsUpdater!
+        searchResultsController?.searchBar.sizeToFit()
+
+        tableView.tableHeaderView = searchResultsController?.searchBar
+
+        definesPresentationContext = true
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.translucent = true
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.translucent = false
     }
 
     // MARK: - Table view data source
@@ -43,26 +61,6 @@ class RealmsTableViewController: UITableViewController {
             favoriteRealmsController?.addFavorite(realm)
         }
 
-        tableView.reloadData()
-    }
-}
-
-extension RealmsTableViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        searchBar.showsCancelButton = true
-    }
-
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        searchResultsUpdater?.search(searchText)
-    }
-
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-        searchBar.showsCancelButton = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        realms = searchResultsUpdater?.realms ?? []
         tableView.reloadData()
     }
 }

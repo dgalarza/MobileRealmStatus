@@ -21,6 +21,10 @@ struct FavoriteRealmsController {
         favoritesManager.removeFavorite(realm.name)
     }
 
+    func shouldShowEmptyState() -> Bool {
+        return favoritesManager.favorites.isEmpty
+    }
+
     func realmIsFavorited(realm: Realm) -> Bool {
         return contains(favoritesManager.favorites, realm.name)
     }

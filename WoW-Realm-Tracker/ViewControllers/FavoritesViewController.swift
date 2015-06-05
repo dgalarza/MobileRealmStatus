@@ -3,11 +3,11 @@ import Runes
 
 class FavoritesViewController: UITableViewController {
     private let cellIdentifier = "Realm"
-    var favoriteRealmsController: FavoriteRealmsController?
+    var controller: FavoriteRealmsController?
 
     private var favoriteRealms: [Realm] {
         get {
-            return (favoriteRealmsController >>- { $0.favoriteRealms }) ?? []
+            return (controller >>- { $0.favoriteRealms }) ?? []
         }
     }
 
@@ -18,11 +18,12 @@ class FavoritesViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
+        toggleEmptyState()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let realmsViewController = segue.destinationViewController as! RealmsTableViewController
-        realmsViewController.favoriteRealmsController = favoriteRealmsController
+        realmsViewController.favoriteRealmsController = controller
     }
 
     @IBAction func refresh(sender: UIRefreshControl) {
@@ -38,7 +39,7 @@ class FavoritesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = favoriteRealms[indexPath.row]
 
-        cell.viewModel = RealmViewModel(realm: realm, favoritesController: favoriteRealmsController!)
+        cell.viewModel = RealmViewModel(realm: realm, favoritesController: controller!)
         cell.includeStatusImage()
 
         return cell
@@ -51,15 +52,34 @@ class FavoritesViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             let realm = favoriteRealms[indexPath.row]
-            favoriteRealmsController?.unfavorite(realm)
+            controller?.unfavorite(realm)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            toggleEmptyState()
         }
+    }
+
+    private func toggleEmptyState() {
+        if controller?.shouldShowEmptyState() ?? true {
+            displayEmptyState()
+        } else {
+            hideEmptyState()
+        }
+    }
+
+    private func displayEmptyState() {
+        let emptyStateViewController = EmptyStateViewController.create()
+        emptyStateViewController.moveToParent(self) { self.tableView.backgroundView = $0 }
+    }
+
+    private func hideEmptyState() {
+        let emptyStateViewController = childViewControllers.last as? EmptyStateViewController
+        emptyStateViewController?.removeFromParent { self.tableView.backgroundView = .None }
     }
 }
 
 extension FavoritesViewController: RealmsDelegate {
     func receivedRealms(realms: [Realm]) {
-        favoriteRealmsController = FavoriteRealmsController(realms: realms)
+        controller = FavoriteRealmsController(realms: realms)
         refreshControl?.endRefreshing()
         tableView.reloadData()
         SVProgressHUD.dismiss()

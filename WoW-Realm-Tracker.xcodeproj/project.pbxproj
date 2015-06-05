@@ -33,6 +33,9 @@
 		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
 		22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
 		22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
+		22AEDE8C1B2132150010349A /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AEDE8B1B2132150010349A /* EmptyState.xib */; };
+		22AEDE8E1B2133140010349A /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */; };
+		22AEDE901B2135060010349A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEDE8F1B2135060010349A /* UIViewController.swift */; };
 		22AFCBCF1B0FD46D00D6DD6B /* FavoritesListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */; };
 		22AFCBD01B0FD48000D6DD6B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22AFCBD41B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD31B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift */; };
@@ -98,6 +101,9 @@
 		227DCF1B1B12AA8200BCE33A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22A270A51B081D6900C28773 /* RealmsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsDelegate.swift; sourceTree = "<group>"; };
+		22AEDE8B1B2132150010349A /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
+		22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
+		22AEDE8F1B2135060010349A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesListSpec.swift; sourceTree = "<group>"; };
 		22AFCBD31B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsControllerSpec.swift; sourceTree = "<group>"; };
 		22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */,
 				22E649281B06415000578AFD /* FavoritesViewController.swift */,
 				225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */,
+				22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				2215F1E21B06E9CC00505FCD /* RealmCell.swift */,
+				22AEDE8B1B2132150010349A /* EmptyState.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 				22F5B6E41B08427E008ED648 /* UIWindow.swift */,
 				22F5B6E61B084305008ED648 /* UIColor.swift */,
 				221285CC1B097A7E002FA5B5 /* UIfont.swift */,
+				22AEDE8F1B2135060010349A /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10316F86452F2FBCAB95DA31 /* Images.xcassets in Resources */,
+				22AEDE8C1B2132150010349A /* EmptyState.xib in Resources */,
 				5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +542,7 @@
 				220DCFCF1AF8618F000022EC /* RealmsApi.swift in Sources */,
 				22F5B6E71B084305008ED648 /* UIColor.swift in Sources */,
 				2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */,
+				22AEDE8E1B2133140010349A /* EmptyStateViewController.swift in Sources */,
 				22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */,
 				22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */,
 				22AFCBD71B10E49900D6DD6B /* FavoritesManager.swift in Sources */,
@@ -542,6 +553,7 @@
 				225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */,
 				22E649291B06415000578AFD /* FavoritesViewController.swift in Sources */,
 				225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */,
+				22AEDE901B2135060010349A /* UIViewController.swift in Sources */,
 				0A7535F5F27E621A6659354A /* Main.storyboard in Sources */,
 				22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */,
 				221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */,

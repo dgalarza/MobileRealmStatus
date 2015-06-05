@@ -65,6 +65,34 @@ class FavoriteRealmsControllerSpec: QuickSpec {
                 }
             }
         }
+
+        describe("shouldShowEmptyState") {
+            context("user has not favorited any realms") {
+                it("returns true") {
+                    let favoritesMananager = FakeFavoritesManager()
+                    let favoriteRealmsController = FavoriteRealmsController(
+                        realms: [],
+                        favoritesManager: favoritesMananager
+                    )
+
+                    expect(favoriteRealmsController.shouldShowEmptyState()).to(beTrue())
+                }
+            }
+
+            context("user has favorited at least one realm") {
+                it("returns false") {
+                    let realm = self.buildRealm("Arthas")
+                    let favoritesMananager = FakeFavoritesManager()
+                    favoritesMananager.addFavorite("Arthas")
+                    let favoriteRealmsController = FavoriteRealmsController(
+                        realms: [realm],
+                        favoritesManager: favoritesMananager
+                    )
+
+                    expect(favoriteRealmsController.shouldShowEmptyState()).to(beFalse())
+                }
+            }
+        }
     }
 
     private func buildRealm(name: String) -> Realm {

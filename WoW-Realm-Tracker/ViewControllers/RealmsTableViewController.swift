@@ -62,6 +62,8 @@ extension RealmsTableViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchBar.showsCancelButton = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        realms = searchResultsUpdater?.realms ?? []
+        tableView.reloadData()
     }
 }
 

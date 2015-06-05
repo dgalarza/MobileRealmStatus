@@ -16,6 +16,8 @@
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		2215F1E61B081CBB00505FCD /* RealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E51B081CBB00505FCD /* RealmsController.swift */; };
 		22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; };
+		225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */; };
+		225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */; };
 		227DCF151B12AA1A00BCE33A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
 		227DCF161B12AA1A00BCE33A /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF131B12AA1A00BCE33A /* Box.framework */; };
 		227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF141B12AA1A00BCE33A /* Runes.framework */; };
@@ -87,6 +89,8 @@
 		2215F1E21B06E9CC00505FCD /* RealmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
 		2215F1E51B081CBB00505FCD /* RealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsController.swift; sourceTree = "<group>"; };
 		22542EB51B0828F700145420 /* FavoriteRealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsController.swift; sourceTree = "<group>"; };
+		225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		227DCF121B12AA1A00BCE33A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		227DCF131B12AA1A00BCE33A /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		227DCF141B12AA1A00BCE33A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			children = (
 				22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */,
 				22E649281B06415000578AFD /* FavoritesViewController.swift */,
+				225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				2215F1E51B081CBB00505FCD /* RealmsController.swift */,
 				22542EB51B0828F700145420 /* FavoriteRealmsController.swift */,
 				22F5B6F61B096B39008ED648 /* RealmSearchController.swift */,
+				225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -533,7 +539,9 @@
 				22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */,
 				22A270A61B081D6900C28773 /* RealmsDelegate.swift in Sources */,
 				22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */,
+				225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */,
 				22E649291B06415000578AFD /* FavoritesViewController.swift in Sources */,
+				225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */,
 				0A7535F5F27E621A6659354A /* Main.storyboard in Sources */,
 				22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */,
 				221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */,

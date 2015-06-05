@@ -3,7 +3,7 @@ import Runes
 
 class FavoritesViewController: UITableViewController {
     private let cellIdentifier = "Realm"
-    private var favoriteRealmsController: FavoriteRealmsController?
+    var favoriteRealmsController: FavoriteRealmsController?
 
     private var favoriteRealms: [Realm] {
         get {
@@ -13,8 +13,6 @@ class FavoritesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.showWithMaskType(.Clear)
-        retrieveRealms()
         navigationItem.leftBarButtonItem = editButtonItem()
     }
 
@@ -28,7 +26,8 @@ class FavoritesViewController: UITableViewController {
     }
 
     @IBAction func refresh(sender: UIRefreshControl) {
-        retrieveRealms()
+        let realmsController = RealmsController(realmsDelegate: self)
+        realmsController.retrieveRealms()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,11 +54,6 @@ class FavoritesViewController: UITableViewController {
             favoriteRealmsController?.unfavorite(realm)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
-    }
-
-    private func retrieveRealms() {
-        let realmsController = RealmsController(realmsDelegate: self)
-        realmsController.retrieveRealms()
     }
 }
 

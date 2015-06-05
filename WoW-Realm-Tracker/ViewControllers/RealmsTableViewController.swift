@@ -1,23 +1,16 @@
-import UIKit
-import Runes
-
-class RealmsTableViewController: UITableViewController {
-    private let cellIdentifier = "Realm"
-
-    @IBOutlet weak var searchBar: UISearchBar!
-
-    var favoriteRealmsController: FavoriteRealmsController?
+class RealmsTableViewController: BaseRealmsTableViewController {
     var searchResultsController: UISearchController?
+    var resultsViewController: ResultsTableViewController?
     var searchResultsUpdater: RealmSearchController?
-    var realms = [Realm]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultsViewController = ResultsTableViewController()
         realms = favoriteRealmsController.map { $0.realms } ?? []
-        searchResultsUpdater = RealmSearchController(realms: realms, searchDelegate: self)
+        searchResultsUpdater = RealmSearchController(realms: realms, searchDelegate: resultsViewController!)
 
-        searchResultsController = UISearchController(searchResultsController: nil)
-        searchResultsController?.dimsBackgroundDuringPresentation = false
+        resultsViewController?.favoriteRealmsController = favoriteRealmsController
+        searchResultsController = UISearchController(searchResultsController: resultsViewController)
         searchResultsController?.searchResultsUpdater = searchResultsUpdater!
         searchResultsController?.searchBar.sizeToFit()
 
@@ -34,40 +27,5 @@ class RealmsTableViewController: UITableViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.translucent = false
-    }
-
-    // MARK: - Table view data source
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return realms.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
-        let realm = realms[indexPath.row]
-
-        cell.viewModel = RealmViewModel(realm: realm, favoritesController: favoriteRealmsController!)
-
-        return cell
-    }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let realm = realms[indexPath.row]
-        let isFavorited = (favoriteRealmsController >>- { $0.realmIsFavorited(realm) }) ?? false
-
-        if isFavorited {
-            favoriteRealmsController?.unfavorite(realm)
-        } else {
-            favoriteRealmsController?.addFavorite(realm)
-        }
-
-        tableView.reloadData()
-    }
-}
-
-extension RealmsTableViewController: RealmsSearchDelegate {
-    func realmsFiltered(filteredRealms: [Realm]) {
-        realms = filteredRealms
-        tableView.reloadData()
     }
 }

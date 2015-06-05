@@ -28,6 +28,8 @@
 		227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
 		227DCF211B12AA9900BCE33A /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
 		227DCF221B12AA9900BCE33A /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
+		22848FB91B223CBA00D8D6E7 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22848FB81B223CBA00D8D6E7 /* ResultsTableViewController.swift */; };
+		22848FBD1B22429F00D8D6E7 /* BaseRealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22848FBC1B22429F00D8D6E7 /* BaseRealmsTableViewController.swift */; };
 		229F1DBB1B064C470025CD7B /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22A270A61B081D6900C28773 /* RealmsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A270A51B081D6900C28773 /* RealmsDelegate.swift */; };
 		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
@@ -99,6 +101,8 @@
 		227DCF141B12AA1A00BCE33A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		227DCF1A1B12AA8200BCE33A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		227DCF1B1B12AA8200BCE33A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		22848FB81B223CBA00D8D6E7 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		22848FBC1B22429F00D8D6E7 /* BaseRealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmsTableViewController.swift; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22A270A51B081D6900C28773 /* RealmsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsDelegate.swift; sourceTree = "<group>"; };
 		22AEDE8B1B2132150010349A /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				22E649281B06415000578AFD /* FavoritesViewController.swift */,
 				225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */,
 				22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */,
+				22848FB81B223CBA00D8D6E7 /* ResultsTableViewController.swift */,
+				22848FBC1B22429F00D8D6E7 /* BaseRealmsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				22F5B6E71B084305008ED648 /* UIColor.swift in Sources */,
 				2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */,
 				22AEDE8E1B2133140010349A /* EmptyStateViewController.swift in Sources */,
+				22848FBD1B22429F00D8D6E7 /* BaseRealmsTableViewController.swift in Sources */,
 				22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */,
 				22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */,
 				22AFCBD71B10E49900D6DD6B /* FavoritesManager.swift in Sources */,
@@ -563,6 +570,7 @@
 				C750CCFEE2EAB2985A44F9B9 /* LaunchScreen.xib in Sources */,
 				22F5DFBB1AF86043002F37B1 /* Realm.swift in Sources */,
 				22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */,
+				22848FB91B223CBA00D8D6E7 /* ResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

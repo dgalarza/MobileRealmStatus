@@ -19,7 +19,6 @@ extension RealmSearchController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let term = searchController.searchBar.text
         let filteredRealms: [Realm]
-        println("term: \(term)")
 
         if term.isEmpty {
             filteredRealms = realms

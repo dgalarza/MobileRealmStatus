@@ -173,6 +173,7 @@
 		1C3EB71259773C769FE61322 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				22AEDE8B1B2132150010349A /* EmptyState.xib */,
 				AA45A1DE3A32AB0568A67266 /* LaunchScreen.xib */,
 			);
 			path = Nibs;
@@ -281,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				2215F1E21B06E9CC00505FCD /* RealmCell.swift */,
-				22AEDE8B1B2132150010349A /* EmptyState.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -23,7 +23,7 @@ class FavoritesViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let realmsViewController = segue.destinationViewController as! RealmsTableViewController
-        realmsViewController.favoriteRealmsController = controller
+        realmsViewController.controller = controller
     }
 
     @IBAction func refresh(sender: UIRefreshControl) {

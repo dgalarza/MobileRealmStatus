@@ -2,7 +2,7 @@ struct FavoriteRealmsController {
     private let favoritesManager: FavoritesManager
     let realms: [Realm]
 
-    init(realms: [Realm], favoritesManager: FavoritesManager? = nil) {
+    init(realms: [Realm], favoritesManager: FavoritesManager? = .None) {
         self.realms = realms
         self.favoritesManager = favoritesManager.map { $0 } ?? FavoritesList.sharedFavoritesList
     }

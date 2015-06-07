@@ -6,14 +6,13 @@ class RealmsTableViewController: UITableViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
 
-    var favoriteRealmsController: FavoriteRealmsController?
-    var searchResultsController = UISearchController()
+    var controller: FavoriteRealmsController?
     var searchResultsUpdater: RealmSearchController?
     var realms = [Realm]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        realms = favoriteRealmsController.map { $0.realms } ?? []
+        realms = controller.map { $0.realms } ?? []
         searchResultsUpdater = RealmSearchController(realms: realms, viewController: self)
         searchBar.delegate = self
     }
@@ -32,19 +31,19 @@ class RealmsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
         let realm = realms[indexPath.row]
 
-        cell.viewModel = RealmViewModel(realm: realm, favoritesController: favoriteRealmsController!)
+        cell.viewModel = RealmViewModel(realm: realm, favoritesController: controller!)
 
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let realm = realms[indexPath.row]
-        let isFavorited = (favoriteRealmsController >>- { $0.realmIsFavorited(realm) }) ?? false
+        let isFavorited = (controller >>- { $0.realmIsFavorited(realm) }) ?? false
 
         if isFavorited {
-            favoriteRealmsController?.unfavorite(realm)
+            controller?.unfavorite(realm)
         } else {
-            favoriteRealmsController?.addFavorite(realm)
+            controller?.addFavorite(realm)
         }
 
         tableView.reloadData()

@@ -1,9 +1,9 @@
 struct RealmsController {
     let realmsDelegate: RealmsDelegate
-    let apiClient = RealmsApi()
+    let client = RealmsClient()
 
     func retrieveRealms() {
-        apiClient.realmStatus() { realms in
+        client.realmStatus() { realms in
             self.realmsDelegate.receivedRealms(realms)
         }
     }

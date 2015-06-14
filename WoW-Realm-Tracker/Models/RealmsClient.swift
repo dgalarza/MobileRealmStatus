@@ -1,9 +1,9 @@
 import Runes
 import Argo
 
-let requestUrl = "http://us.battle.net/api/wow/realm/status"
+struct RealmsClient {
+    let requestUrl = "http://us.battle.net/api/wow/realm/status"
 
-struct RealmsApi {
     func realmStatus(callback: ([Realm]) -> Void) {
         let url = NSURL(string: requestUrl)
         let task = url.map { NSURLSession.sharedSession().dataTaskWithURL($0) { (data, response, error) in

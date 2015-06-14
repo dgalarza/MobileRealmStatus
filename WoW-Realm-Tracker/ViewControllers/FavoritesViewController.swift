@@ -13,7 +13,6 @@ class FavoritesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -65,8 +64,10 @@ class FavoritesViewController: UITableViewController {
     private func toggleEmptyState() {
         if controller?.shouldShowEmptyState() ?? true {
             displayEmptyState()
+            navigationItem.leftBarButtonItem = .None
         } else {
             hideEmptyState()
+            navigationItem.leftBarButtonItem = editButtonItem()
         }
     }
 

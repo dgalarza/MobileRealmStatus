@@ -223,13 +223,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		22F5DFC01AF8616C002F37B1 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
 		384C69FC76A0F301055284A0 /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				2215F1E41B081C8E00505FCD /* ViewControllers */,
-				22F5DFC01AF8616C002F37B1 /* Services */,
 				8A3561FEA902CA669A6EE32F /* Extensions */,
 				3D7DB467A0B8C00B25A8F2BC /* Protocols */,
 				82FEC25C6B73B2CAF543B160 /* Models */,

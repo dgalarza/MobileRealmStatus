@@ -15,9 +15,17 @@
 		221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		2215F1E61B081CBB00505FCD /* RealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E51B081CBB00505FCD /* RealmsController.swift */; };
+		222AA3D41B861B5000A8E326 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AA3D31B861B5000A8E326 /* InterfaceController.swift */; };
+		222AA3D61B861B5000A8E326 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AA3D51B861B5000A8E326 /* NotificationController.swift */; };
+		222AA3D81B861B5000A8E326 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AA3D71B861B5000A8E326 /* GlanceController.swift */; };
+		222AA3DE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 222AA3DD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app */; };
+		222AA3E61B861B5000A8E326 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222AA3E41B861B5000A8E326 /* Interface.storyboard */; };
+		222AA3E81B861B5000A8E326 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222AA3E71B861B5000A8E326 /* Images.xcassets */; };
+		222AA3EB1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 222AA3CE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22542EB61B0828F700145420 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; };
 		225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */; };
 		225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */; };
+		2268A6BC1B8628B40032239D /* RealmRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268A6BB1B8628B40032239D /* RealmRowController.swift */; };
 		227DCF151B12AA1A00BCE33A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
 		227DCF161B12AA1A00BCE33A /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF131B12AA1A00BCE33A /* Box.framework */; };
 		227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF141B12AA1A00BCE33A /* Runes.framework */; };
@@ -69,6 +77,20 @@
 			remoteGlobalIDString = DEFC7453D4D23BF52EAC2D74;
 			remoteInfo = MobileRealmStatus;
 		};
+		222AA3DF1B861B5000A8E326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B8E929C09B784520C15DCD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222AA3DC1B861B5000A8E326;
+			remoteInfo = "WoW-Realm-Tracker WatchKit App";
+		};
+		222AA3E91B861B5000A8E326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B8E929C09B784520C15DCD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222AA3CD1B861B5000A8E326;
+			remoteInfo = "WoW-Realm-Tracker WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +106,17 @@
 			name = "Carthage Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		222AA3F21B861B5000A8E326 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				222AA3EB1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -91,9 +124,20 @@
 		221285CC1B097A7E002FA5B5 /* UIfont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIfont.swift; sourceTree = "<group>"; };
 		2215F1E21B06E9CC00505FCD /* RealmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
 		2215F1E51B081CBB00505FCD /* RealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsController.swift; sourceTree = "<group>"; };
+		222AA3CE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WoW-Realm-Tracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		222AA3D11B861B5000A8E326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222AA3D21B861B5000A8E326 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		222AA3D31B861B5000A8E326 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		222AA3D51B861B5000A8E326 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		222AA3D71B861B5000A8E326 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		222AA3DD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW-Realm-Tracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		222AA3E31B861B5000A8E326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222AA3E51B861B5000A8E326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		222AA3E71B861B5000A8E326 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22542EB51B0828F700145420 /* FavoriteRealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsController.swift; sourceTree = "<group>"; };
 		225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		2268A6BB1B8628B40032239D /* RealmRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRowController.swift; sourceTree = "<group>"; };
 		227DCF121B12AA1A00BCE33A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		227DCF131B12AA1A00BCE33A /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		227DCF141B12AA1A00BCE33A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
@@ -147,6 +191,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		222AA3CB1B861B5000A8E326 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA6B7F9A54EFA947F4D6FCE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +239,45 @@
 				22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		222AA3CF1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				222AA3D31B861B5000A8E326 /* InterfaceController.swift */,
+				222AA3D51B861B5000A8E326 /* NotificationController.swift */,
+				222AA3D71B861B5000A8E326 /* GlanceController.swift */,
+				222AA3D01B861B5000A8E326 /* Supporting Files */,
+				2268A6BB1B8628B40032239D /* RealmRowController.swift */,
+			);
+			path = "WoW-Realm-Tracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		222AA3D01B861B5000A8E326 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				222AA3D11B861B5000A8E326 /* Info.plist */,
+				222AA3D21B861B5000A8E326 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		222AA3E11B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				222AA3E41B861B5000A8E326 /* Interface.storyboard */,
+				222AA3E71B861B5000A8E326 /* Images.xcassets */,
+				222AA3E21B861B5000A8E326 /* Supporting Files */,
+			);
+			path = "WoW-Realm-Tracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		222AA3E21B861B5000A8E326 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				222AA3E31B861B5000A8E326 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		22AFCBCD1B0FD43300D6DD6B /* Models */ = {
@@ -291,6 +381,8 @@
 			children = (
 				F6222C0B871422E808E3A467 /* WoW-Realm-Tracker */,
 				0BEC3C3953ABFC63289822F1 /* UnitTests */,
+				222AA3CF1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension */,
+				222AA3E11B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App */,
 				A41A601B088521C309710449 /* Frameworks */,
 				BDD58F7B903577AE92EB5706 /* Products */,
 			);
@@ -366,6 +458,8 @@
 			children = (
 				398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */,
 				989B21C2E19A16FBE8218426 /* UnitTests.xctest */,
+				222AA3CE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex */,
+				222AA3DD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,6 +494,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		222AA3CD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222AA3F11B861B5000A8E326 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker WatchKit Extension" */;
+			buildPhases = (
+				222AA3CA1B861B5000A8E326 /* Sources */,
+				222AA3CB1B861B5000A8E326 /* Frameworks */,
+				222AA3CC1B861B5000A8E326 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222AA3E01B861B5000A8E326 /* PBXTargetDependency */,
+			);
+			name = "WoW-Realm-Tracker WatchKit Extension";
+			productName = "WoW-Realm-Tracker WatchKit Extension";
+			productReference = 222AA3CE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		222AA3DC1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222AA3F01B861B5000A8E326 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker WatchKit App" */;
+			buildPhases = (
+				222AA3DB1B861B5000A8E326 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WoW-Realm-Tracker WatchKit App";
+			productName = "WoW-Realm-Tracker WatchKit App";
+			productReference = 222AA3DD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		5B36AF02D502EA333DFCAF3C /* UnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4ADE3785DB9F2D987B60E9C /* Build configuration list for PBXNativeTarget "UnitTests" */;
@@ -428,10 +555,12 @@
 				666C10C0E488E025CA19D858 /* Resources */,
 				EA98BCF702D0E453CAADB6FD /* Warn for TODO and FIXME comments */,
 				227DCF191B12AA3C00BCE33A /* Carthage run script */,
+				222AA3F21B861B5000A8E326 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				222AA3EA1B861B5000A8E326 /* PBXTargetDependency */,
 			);
 			name = "WoW-Realm-Tracker";
 			productName = MobileRealmStatus;
@@ -448,6 +577,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = dgalarza;
 				TargetAttributes = {
+					222AA3CD1B861B5000A8E326 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					222AA3DC1B861B5000A8E326 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 25S894MLT3;
+					};
 					5B36AF02D502EA333DFCAF3C = {
 						TestTargetID = DEFC7453D4D23BF52EAC2D74;
 					};
@@ -459,6 +595,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 73A5FEB5FC06CC60AE4B386E;
 			productRefGroup = BDD58F7B903577AE92EB5706 /* Products */;
@@ -467,11 +604,30 @@
 			targets = (
 				DEFC7453D4D23BF52EAC2D74 /* WoW-Realm-Tracker */,
 				5B36AF02D502EA333DFCAF3C /* UnitTests */,
+				222AA3CD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension */,
+				222AA3DC1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		222AA3CC1B861B5000A8E326 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222AA3DE1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222AA3DB1B861B5000A8E326 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222AA3E61B861B5000A8E326 /* Interface.storyboard in Resources */,
+				222AA3E81B861B5000A8E326 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		666C10C0E488E025CA19D858 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,6 +683,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		222AA3CA1B861B5000A8E326 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2268A6BC1B8628B40032239D /* RealmRowController.swift in Sources */,
+				222AA3D61B861B5000A8E326 /* NotificationController.swift in Sources */,
+				222AA3D41B861B5000A8E326 /* InterfaceController.swift in Sources */,
+				222AA3D81B861B5000A8E326 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32F8C4478C408097422AB12E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,9 +756,141 @@
 			target = DEFC7453D4D23BF52EAC2D74 /* WoW-Realm-Tracker */;
 			targetProxy = 07878A530516F9482F4A1A19 /* PBXContainerItemProxy */;
 		};
+		222AA3E01B861B5000A8E326 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222AA3DC1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit App */;
+			targetProxy = 222AA3DF1B861B5000A8E326 /* PBXContainerItemProxy */;
+		};
+		222AA3EA1B861B5000A8E326 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222AA3CD1B861B5000A8E326 /* WoW-Realm-Tracker WatchKit Extension */;
+			targetProxy = 222AA3E91B861B5000A8E326 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		222AA3E41B861B5000A8E326 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				222AA3E51B861B5000A8E326 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		222AA3EC1B861B5000A8E326 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "WoW-Realm-Tracker WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		222AA3ED1B861B5000A8E326 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "WoW-Realm-Tracker WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		222AA3EE1B861B5000A8E326 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = WoW_Realm_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "WoW-Realm-Tracker WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		222AA3EF1B861B5000A8E326 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = WoW_Realm_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "WoW-Realm-Tracker WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		3CBA2F3F2C06E94496A8546C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -809,6 +1108,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		222AA3F01B861B5000A8E326 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222AA3EE1B861B5000A8E326 /* Debug */,
+				222AA3EF1B861B5000A8E326 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222AA3F11B861B5000A8E326 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222AA3EC1B861B5000A8E326 /* Debug */,
+				222AA3ED1B861B5000A8E326 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		49DA42A1ED610CCCCC9D95E0 /* Build configuration list for PBXNativeTarget "WoW-Realm-Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

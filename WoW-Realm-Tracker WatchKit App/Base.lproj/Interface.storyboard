@@ -10,6 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WoW_Realm_Tracker_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label alignment="left" text="Favorites" id="aSi-DY-7kq">
+                            <color key="textColor" red="0.62026515149999994" green="0.62026515149999994" blue="0.62026515149999994" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
                         <table alignment="left" id="5IL-D9-VWL">
                             <items>
                                 <tableRow identifier="Realm" selectable="NO" id="gUo-3C-eLG" customClass="RealmRowController" customModule="WoW_Realm_Tracker_WatchKit_Extension">
@@ -18,6 +21,7 @@
                                             <imageView width="40" height="40" alignment="left" image="Available" id="PR4-fz-Vvj"/>
                                             <label width="1" alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="sWU-4Y-pim"/>
                                         </items>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="nameLabel" destination="sWU-4Y-pim" id="wDX-S7-GI3"/>

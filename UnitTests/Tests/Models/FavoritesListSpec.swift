@@ -6,7 +6,8 @@ private let favoritesDefaultsKey = "favorites"
 class FavoritesListSpec: QuickSpec {
     private var defaults: NSUserDefaults {
         get {
-            return NSUserDefaults.standardUserDefaults()
+            let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
+            return defaults!
         }
     }
 
@@ -37,7 +38,7 @@ class FavoritesListSpec: QuickSpec {
 
         describe("removeFavorite") {
             it("removes the given favorite from the favorites list") {
-                let defaults = NSUserDefaults.standardUserDefaults()
+                let defaults = self.defaults
                 defaults.setObject(["Arthas"], forKey: favoritesDefaultsKey)
                 defaults.synchronize()
 

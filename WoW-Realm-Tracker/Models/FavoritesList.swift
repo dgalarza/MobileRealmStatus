@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 class FavoritesList: FavoritesManager {
     class var sharedFavoritesList : FavoritesList {
@@ -12,8 +13,8 @@ class FavoritesList: FavoritesManager {
     private(set) var favorites: [String]
 
     init() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let storedFavorites = defaults.objectForKey("favorites") as? [String]
+        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
+        let storedFavorites = defaults?.objectForKey("favorites") as? [String]
 
         if storedFavorites != nil {
             favorites = storedFavorites!
@@ -35,8 +36,8 @@ class FavoritesList: FavoritesManager {
     }
 
     private func saveFavorites() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(favorites, forKey: "favorites")
-        defaults.synchronize()
+        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
+        defaults?.setObject(favorites, forKey: "favorites")
+        defaults?.synchronize()
     }
 }

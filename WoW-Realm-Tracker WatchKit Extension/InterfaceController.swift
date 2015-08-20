@@ -3,8 +3,6 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-    var realms = [String]()
-
     @IBOutlet weak var realmsTable: WKInterfaceTable!
 
     override func awakeWithContext(context: AnyObject?) {
@@ -21,7 +19,9 @@ class InterfaceController: WKInterfaceController {
     }
 
     private func loadRealms() {
-        self.realms = ["Arthas", "Skullcrusher"]
+        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
+        let realms = defaults?.objectForKey("favorites") as! [String]
+
         realmsTable.setNumberOfRows(realms.count, withRowType: "Realm")
 
         var index: Int;

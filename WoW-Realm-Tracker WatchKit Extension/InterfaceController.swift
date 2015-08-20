@@ -12,6 +12,7 @@ class InterfaceController: WKInterfaceController {
 
     override func willActivate() {
         super.willActivate()
+        loadRealms()
     }
 
     override func didDeactivate() {

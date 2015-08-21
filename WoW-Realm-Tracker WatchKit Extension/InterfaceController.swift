@@ -7,29 +7,39 @@ class InterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        loadRealms()
+        RealmsController(realmsDelegate: self).retrieveRealms()
     }
 
     override func willActivate() {
         super.willActivate()
-        loadRealms()
     }
 
     override func didDeactivate() {
         super.didDeactivate()
     }
 
-    private func loadRealms() {
+    private func displayRealms(realms: [Realm]) {
         let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-        let realms = defaults?.objectForKey("favorites") as! [String]
+        let favorites = defaults?.objectForKey("favorites") as! [String]
 
-        realmsTable.setNumberOfRows(realms.count, withRowType: "Realm")
+        let favoritedRealms = realms.filter { contains(favorites, $0.name) }
+        realmsTable.setNumberOfRows(favoritedRealms.count, withRowType: "Realm")
 
         var index: Int;
-        for index = 0; index < realms.count; index++ {
+        for index = 0; index < favoritedRealms.count; index++ {
             let row = realmsTable.rowControllerAtIndex(index) as! RealmRowController
-            row.nameLabel.setText(realms[index])
-            row.statusImage.setImageNamed("Available")
+            let realm = favoritedRealms[index]
+            row.nameLabel.setText(realm.name)
+
+            if realm.status {
+                row.statusImage.setImageNamed("Available")
+            }
         }
+    }
+}
+
+extension InterfaceController: RealmsDelegate {
+    func receivedRealms(realms: [Realm]) {
+        displayRealms(realms)
     }
 }

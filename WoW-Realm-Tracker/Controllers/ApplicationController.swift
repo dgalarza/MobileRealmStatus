@@ -1,3 +1,5 @@
+import RealmTracker
+
 struct ApplicationController {
     var rootViewController: UIViewController {
         let vc = RootViewController()

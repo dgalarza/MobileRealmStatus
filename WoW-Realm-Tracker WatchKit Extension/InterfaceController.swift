@@ -1,6 +1,6 @@
+import RealmTracker
 import WatchKit
 import Foundation
-
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var realmsTable: WKInterfaceTable!
@@ -30,10 +30,6 @@ class InterfaceController: WKInterfaceController {
             let row = realmsTable.rowControllerAtIndex(index) as! RealmRowController
             let realm = favoritedRealms[index]
             row.nameLabel.setText(realm.name)
-
-            if realm.status {
-                row.statusImage.setImageNamed("Available")
-            }
         }
     }
 }

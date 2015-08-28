@@ -1,3 +1,5 @@
+import RealmTracker
+
 struct FavoriteRealmsController {
     private let favoritesManager: FavoritesManager
     let realms: [Realm]

@@ -1,10 +1,16 @@
 import Runes
 import Argo
 
-struct Realm {
-    let name: String
-    let type: String
-    let status: Bool
+public struct Realm {
+    public let name: String
+    public let type: String
+    public let status: Bool
+
+    public init(name: String, type: String, status: Bool) {
+        self.name = name
+        self.type = type
+        self.status = status
+    }
 }
 
 extension Realm: Decodable {
@@ -12,7 +18,7 @@ extension Realm: Decodable {
         return Realm(name: name, type: type, status: status)
     }
 
-    static func decode(j: JSON) -> Decoded<Realm> {
+    public static func decode(j: JSON) -> Decoded<Realm> {
         return create
             <^> j <| "name"
             <*> j <| "type"

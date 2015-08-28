@@ -1,6 +1,7 @@
 import UIKit
 import Quick
 import Nimble
+import RealmTracker
 
 class RealmSearchControllerSpec: QuickSpec {
     override func spec() {

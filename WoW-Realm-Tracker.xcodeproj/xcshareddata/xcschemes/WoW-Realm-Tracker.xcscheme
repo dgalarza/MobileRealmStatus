@@ -34,6 +34,20 @@
                ReferencedContainer = "container:WoW-Realm-Tracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2262D0181B90EC5B00881F3F"
+               BuildableName = "RealmTrackerTests.xctest"
+               BlueprintName = "RealmTrackerTests"
+               ReferencedContainer = "container:WoW-Realm-Tracker.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "5B36AF02D502EA333DFCAF3C"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
+               ReferencedContainer = "container:WoW-Realm-Tracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2262D0181B90EC5B00881F3F"
+               BuildableName = "RealmTrackerTests.xctest"
+               BlueprintName = "RealmTrackerTests"
                ReferencedContainer = "container:WoW-Realm-Tracker.xcodeproj">
             </BuildableReference>
          </TestableReference>

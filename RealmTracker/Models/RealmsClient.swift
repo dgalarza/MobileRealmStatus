@@ -1,7 +1,7 @@
 import Runes
 import Argo
 
-struct RealmsClient {
+public struct RealmsClient {
     let requestUrl = "http://us.battle.net/api/wow/realm/status"
 
     func realmStatus(callback: ([Realm]) -> Void) {

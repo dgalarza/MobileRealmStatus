@@ -10,19 +10,7 @@ class InterfaceController: WKInterfaceController {
         RealmsController(realmsDelegate: self).retrieveRealms()
     }
 
-    override func willActivate() {
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        super.didDeactivate()
-    }
-
-    private func displayRealms(realms: [Realm]) {
-        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-        let favorites = defaults?.objectForKey("favorites") as! [String]
-
-        let favoritedRealms = realms.filter { contains(favorites, $0.name) }
+    private func displayRealms(favoritedRealms: [Realm]) {
         realmsTable.setNumberOfRows(favoritedRealms.count, withRowType: "Realm")
 
         var index: Int;
@@ -36,6 +24,9 @@ class InterfaceController: WKInterfaceController {
 
 extension InterfaceController: RealmsDelegate {
     func receivedRealms(realms: [Realm]) {
-        displayRealms(realms)
+        let favoritesController = FavoriteRealmsController(realms: realms)
+        let favoritedRealms = favoritesController.favoriteRealms
+
+        displayRealms(favoritedRealms)
     }
 }

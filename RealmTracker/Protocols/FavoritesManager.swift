@@ -1,4 +1,4 @@
-protocol FavoritesManager {
+public protocol FavoritesManager {
     var favorites: [String] { get }
 
     func addFavorite(realmName: String)

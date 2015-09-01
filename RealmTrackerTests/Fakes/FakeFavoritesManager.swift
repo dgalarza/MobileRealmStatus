@@ -1,3 +1,5 @@
+import RealmTracker
+
 class FakeFavoritesManager: FavoritesManager {
     var favorites = [String]()
 

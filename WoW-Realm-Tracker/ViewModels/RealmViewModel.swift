@@ -1,5 +1,3 @@
-import RealmTracker
-
 struct RealmViewModel {
     let realm: Realm
     let favoritesController: FavoriteRealmsController

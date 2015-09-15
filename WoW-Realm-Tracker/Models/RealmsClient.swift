@@ -7,7 +7,7 @@ public struct RealmsClient {
     func realmStatus(callback: ([Realm]) -> Void) {
         let url = NSURL(string: requestUrl)
         let task = url.map { NSURLSession.sharedSession().dataTaskWithURL($0) { (data, response, error) in
-                self.parseJson(data, callback: callback)
+                self.parseJson(data!, callback: callback)
             }
         }
 
@@ -15,7 +15,7 @@ public struct RealmsClient {
     }
 
     private func parseJson(data: NSData, callback: [Realm] -> ()) {
-        let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: nil)
+        let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0))
 
         if let j: AnyObject = json {
             let realms: [Realm] = (j["realms"] >>- decode) ?? []

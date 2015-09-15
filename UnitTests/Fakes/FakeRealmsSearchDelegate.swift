@@ -1,5 +1,3 @@
-import RealmTracker
-
 class FakeRealmsSearchDelegate: RealmsSearchDelegate {
     var filteredRealms = [Realm]()
 

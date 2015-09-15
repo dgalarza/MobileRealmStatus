@@ -1,4 +1,5 @@
-github "Quick/Quick"
-github "Quick/Nimble"
-github "thoughtbot/Argo"
+github "Quick/Quick" "v0.6.0"
+github "Quick/Nimble" "v2.0.0-rc.3"
+github "thoughtbot/Runes" "master"
+github "thoughtbot/Argo" "td-swift-2"
 github "TransitApp/SVProgressHUD"

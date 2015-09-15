@@ -1,5 +1,3 @@
-import RealmTracker
-
 public struct FavoriteRealmsController {
     private let favoritesManager: FavoritesManager
     public let realms: [Realm]
@@ -11,7 +9,7 @@ public struct FavoriteRealmsController {
 
     public var favoriteRealms: [Realm] {
         get {
-            return realms.filter { contains(self.favoritesManager.favorites, $0.name) }
+            return realms.filter { self.favoritesManager.favorites.contains($0.name) }
         }
     }
 
@@ -28,6 +26,6 @@ public struct FavoriteRealmsController {
     }
 
     public func realmIsFavorited(realm: Realm) -> Bool {
-        return contains(favoritesManager.favorites, realm.name)
+        return favoritesManager.favorites.contains(realm.name)
     }
 }

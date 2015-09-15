@@ -1,4 +1,3 @@
-import RealmTracker
 import UIKit
 
 class RootViewController: UIViewController {

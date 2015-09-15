@@ -6,7 +6,7 @@ class RealmCell: UITableViewCell {
         configureStyles()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
@@ -22,7 +22,9 @@ class RealmCell: UITableViewCell {
     }
 
     func includeStatusImage() {
-        viewModel.map { imageView?.image = UIImage(named: $0.availabilityImage) }
+        if let viewModel = self.viewModel {
+            imageView?.image = UIImage(named: viewModel.availabilityImage)
+        }
     }
 
     private func configureStyles() {

@@ -1,5 +1,3 @@
-import RealmTracker
-
 class FakeFavoritesManager: FavoritesManager {
     var favorites = [String]()
 
@@ -8,7 +6,7 @@ class FakeFavoritesManager: FavoritesManager {
     }
 
     func  removeFavorite(realmName: String) {
-        if let index = find(favorites, realmName) {
+        if let index = favorites.indexOf(realmName) {
             favorites.removeAtIndex(index)
         }
     }

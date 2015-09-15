@@ -1,4 +1,3 @@
-import RealmTracker
 import Foundation
 
 struct RealmSearchController {

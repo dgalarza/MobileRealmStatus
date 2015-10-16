@@ -1,14 +1,15 @@
+import Swish
+
 public struct RealmsController {
     let realmsDelegate: RealmsDelegate
-    let client = RealmsClient()
+    let client = APIClient()
 
     public init(realmsDelegate: RealmsDelegate) {
         self.realmsDelegate = realmsDelegate
     }
 
     public func retrieveRealms() {
-        client.realmStatus() { realms in
-            self.realmsDelegate.receivedRealms(realms)
-        }
+        let request = RealmsRequest()
+        client.performRequest(request, completionHandler: realmsDelegate.receivedRealms)
     }
 }

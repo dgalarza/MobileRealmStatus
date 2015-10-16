@@ -1,5 +1,6 @@
 import UIKit
 import Runes
+import Result
 
 class FavoritesViewController: UITableViewController {
     private let cellIdentifier = "Realm"
@@ -83,10 +84,15 @@ class FavoritesViewController: UITableViewController {
 }
 
 extension FavoritesViewController: RealmsDelegate {
-    func receivedRealms(realms: [Realm]) {
-        controller = FavoriteRealmsController(realms: realms)
+    func receivedRealms(response: Result<[Realm], NSError>) {
+        let controller = response.map { FavoriteRealmsController(realms: $0) }
+
+        if let favoritesController = controller.value {
+            self.controller = favoritesController
+            tableView.reloadData()
+        }
+
         refreshControl?.endRefreshing()
-        tableView.reloadData()
         SVProgressHUD.dismiss()
     }
 }

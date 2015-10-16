@@ -1,4 +1,5 @@
 import UIKit
+import Result
 
 class RootViewController: UIViewController {
     var controller: RealmsController?
@@ -20,7 +21,9 @@ class RootViewController: UIViewController {
 }
 
 extension RootViewController: RealmsDelegate {
-    func receivedRealms(realms: [Realm]) {
-        transitionToFavorites(realms)
+    func receivedRealms(response: Result<[Realm], NSError>) {
+        if let realms = response.value {
+            transitionToFavorites(realms)
+        }
     }
 }

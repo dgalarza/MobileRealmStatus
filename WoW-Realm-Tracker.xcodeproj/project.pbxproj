@@ -13,6 +13,7 @@
 		22116D4F1BA8611100A6FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
+		224FA16B1BD9761D0012CF95 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224FA16A1BD9761D0012CF95 /* Curry.framework */; };
 		225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */; };
 		225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */; };
 		2262D0431B90FBBE00881F3F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
@@ -107,6 +108,7 @@
 		221285CC1B097A7E002FA5B5 /* UIfont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIfont.swift; sourceTree = "<group>"; };
 		2215F1E21B06E9CC00505FCD /* RealmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
 		2215F1E51B081CBB00505FCD /* RealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsController.swift; sourceTree = "<group>"; };
+		224FA16A1BD9761D0012CF95 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		22542EB51B0828F700145420 /* FavoriteRealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRealmsController.swift; sourceTree = "<group>"; };
 		225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224FA16B1BD9761D0012CF95 /* Curry.framework in Frameworks */,
 				22C767841BD1772000D62EC6 /* Result.framework in Frameworks */,
 				22C767801BD176B800D62EC6 /* Swish.framework in Frameworks */,
 				2262D0431B90FBBE00881F3F /* Argo.framework in Frameworks */,
@@ -370,6 +373,7 @@
 		A41A601B088521C309710449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				224FA16A1BD9761D0012CF95 /* Curry.framework */,
 				22C767831BD1772000D62EC6 /* Result.framework */,
 				22C7677F1BD176B800D62EC6 /* Swish.framework */,
 				2262D0411B90FBB300881F3F /* Cartfile.resolved */,
@@ -541,6 +545,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swish.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 			);
 			name = "Carthage run script";
 			outputPaths = (

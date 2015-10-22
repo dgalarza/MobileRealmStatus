@@ -18,18 +18,8 @@ struct RealmViewModel {
         return image
     }
 
-    var type: String {
-        switch realm.type {
-        case "pve":
-            return "PvE"
-        case "pvp":
-            return "PvP"
-        case "rp":
-            return "RP"
-        default:
-            return ""
-        }
-
+    var type: Realm.RealmType {
+        return realm.type
     }
 
     var availabilityImage: String {

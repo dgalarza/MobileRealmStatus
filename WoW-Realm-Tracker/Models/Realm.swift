@@ -1,27 +1,36 @@
 import Runes
 import Argo
+import Curry
 
 struct Realm {
-    let name: String
-    let type: String
-    let status: Bool
+    enum RealmType: String, CustomStringConvertible {
+        case PvP = "pvp"
+        case PvE = "pve"
+        case RP = "rp"
+        case RPPvP = "rppvp"
 
-    init(name: String, type: String, status: Bool) {
-        self.name = name
-        self.type = type
-        self.status = status
+        var description: String {
+            switch self {
+            case .PvP: return "PvP"
+            case .PvE: return "PvE"
+            case .RP: return "RP"
+            case .RPPvP: return "RP PvP"
+            }
+        }
     }
+
+    let name: String
+    let type: RealmType
+    let status: Bool
 }
 
 extension Realm: Decodable {
-    static func create(name:String)(type: String)(status: Bool) -> Realm {
-        return Realm(name: name, type: type, status: status)
-    }
-
     static func decode(j: JSON) -> Decoded<Realm> {
-        return create
+        return curry(Realm.init)
             <^> j <| "name"
             <*> j <| "type"
             <*> j <| "status"
     }
 }
+
+extension Realm.RealmType: Decodable { }

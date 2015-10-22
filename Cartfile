@@ -1,5 +1,6 @@
 github "Quick/Quick" "v0.6.0"
 github "Quick/Nimble" "v2.0.0-rc.3"
 github "TransitApp/SVProgressHUD"
-github "thoughtbot/Swish"
+github "thoughtbot/Swish" "gf-dep-updates"
 github "thoughtbot/Runes"
+github "thoughtbot/Curry" ~> 1.2.0

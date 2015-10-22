@@ -6,8 +6,8 @@ class RealmSearchControllerSpec: QuickSpec {
     override func spec() {
         describe("search") {
             it("filters the given realms by the search term") {
-                let realmA = Realm(name: "Arthas", type: "pvp", status: true)
-                let realmB = Realm(name: "Skullcrusher", type: "pvp", status: true)
+                let realmA = Realm(name: "Arthas", type: .PvP, status: true)
+                let realmB = Realm(name: "Skullcrusher", type: .PvP, status: true)
                 let fakeRealmsSearchDelegate = FakeRealmsSearchDelegate()
 
                 let searchController = RealmSearchController(realms: [realmB, realmA], viewController: fakeRealmsSearchDelegate)

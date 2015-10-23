@@ -1,5 +1,4 @@
 import UIKit
-import Runes
 import Result
 
 class FavoritesViewController: UITableViewController {
@@ -8,7 +7,7 @@ class FavoritesViewController: UITableViewController {
 
     private var favoriteRealms: [Realm] {
         get {
-            return (controller >>- { $0.favoriteRealms }) ?? []
+            return controller.flatMap { $0.favoriteRealms } ?? []
         }
     }
 

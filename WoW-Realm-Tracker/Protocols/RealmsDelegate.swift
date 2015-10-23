@@ -1,5 +1,5 @@
 import Result
 
-public protocol RealmsDelegate {
+protocol RealmsDelegate {
     func receivedRealms(response: Result<[Realm], NSError>)
 }

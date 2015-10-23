@@ -1,5 +1,4 @@
 import UIKit
-import Runes
 
 class RealmsTableViewController: UITableViewController {
     private let cellIdentifier = "Realm"
@@ -38,7 +37,7 @@ class RealmsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let realm = realms[indexPath.row]
-        let isFavorited = (controller >>- { $0.realmIsFavorited(realm) }) ?? false
+        let isFavorited = controller.flatMap { $0.realmIsFavorited(realm) } ?? false
 
         if isFavorited {
             controller?.unfavorite(realm)

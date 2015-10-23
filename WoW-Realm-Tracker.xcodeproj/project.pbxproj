@@ -16,7 +16,6 @@
 		225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */; };
 		225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */; };
 		2262D0431B90FBBE00881F3F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
-		227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF141B12AA1A00BCE33A /* Runes.framework */; };
 		227DCF1C1B12AA8200BCE33A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; };
 		227DCF1D1B12AA8200BCE33A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; };
 		227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
@@ -164,7 +163,6 @@
 				2262D0431B90FBBE00881F3F /* Argo.framework in Frameworks */,
 				32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */,
 				22BD75C31B17F6B800AB8E8D /* SVProgressHUD.framework in Frameworks */,
-				227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +534,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swish.framework",

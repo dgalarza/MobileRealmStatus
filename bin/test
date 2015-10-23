@@ -6,7 +6,7 @@ xcrun xcodebuild \
   -project WoW-Realm-Tracker.xcodeproj \
   -scheme WoW-Realm-Tracker \
   -sdk iphonesimulator \
-  -destination 'platform=iOS Simulator,name=iPad 2,OS=9.0' \
+  -destination 'platform=iOS Simulator,name=iPad 2,OS=8.1' \
   test \
   | xcpretty --color
 

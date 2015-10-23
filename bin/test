@@ -1,5 +1,12 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 set -o pipefail
 
-xcodebuild test -workspace MobileRealmStatus.xcworkspace -scheme MobileRealmStatus -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -t -c
+xcrun xcodebuild \
+  -project WoW-Realm-Tracker.xcodeproj \
+  -scheme WoW-Realm-Tracker \
+  -sdk iphonesimulator \
+  CONFIGURATION_BUILD_DIR='./build' \
+  test \
+  | xcpretty --color
+

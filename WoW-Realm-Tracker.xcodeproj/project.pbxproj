@@ -53,6 +53,7 @@
 		22F5B6F11B0964CD008ED648 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
 		22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
+		22FC26821BDC87FC00D68EA4 /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */; settings = {ASSET_TAGS = (); }; };
 		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
 		5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E24E3251A184795B15E78DD /* Settings.bundle */; };
 		A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */; };
@@ -144,6 +145,7 @@
 		22F5B6F61B096B39008ED648 /* RealmSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSearchController.swift; sourceTree = "<group>"; };
 		22F5DFBA1AF86043002F37B1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsTableViewController.swift; sourceTree = "<group>"; };
+		22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesDataSource.swift; sourceTree = "<group>"; };
 		2DEA1B840172CD335A108DFF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		398AC603BA841D7117001F7F /* WoW-Realm-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoW-Realm-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E24E3251A184795B15E78DD /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				22F5DFBA1AF86043002F37B1 /* Realm.swift */,
 				22F5B6E81B084F65008ED648 /* AppearanceManager.swift */,
 				22C767811BD176D000D62EC6 /* RealmsRequest.swift */,
+				22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				22EB85051BA7C556004F2EE8 /* RealmsController.swift in Sources */,
 				A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */,
 				22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */,
+				22FC26821BDC87FC00D68EA4 /* FavoritesDataSource.swift in Sources */,
 				225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */,
 				22EB85071BA7C568004F2EE8 /* FavoritesList.swift in Sources */,
 				22EB85001BA7C4D8004F2EE8 /* Realm.swift in Sources */,

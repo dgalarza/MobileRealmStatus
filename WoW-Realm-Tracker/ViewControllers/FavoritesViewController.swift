@@ -2,17 +2,15 @@ import UIKit
 import Result
 
 class FavoritesViewController: UITableViewController {
-    private let cellIdentifier = "Realm"
     var controller: FavoriteRealmsController?
-
-    private var favoriteRealms: [Realm] {
-        get {
-            return controller.flatMap { $0.favoriteRealms } ?? []
-        }
-    }
+    let favoritesDataSource = FavoritesDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        favoritesDataSource.viewController = self
+
+        tableView.dataSource = favoritesDataSource
+        tableView.delegate = favoritesDataSource
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -30,38 +28,7 @@ class FavoritesViewController: UITableViewController {
         realmsController.retrieveRealms()
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteRealms.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
-        let realm = favoriteRealms[indexPath.row]
-
-        cell.viewModel = RealmViewModel(realm: realm, favoritesController: controller!)
-        cell.includeStatusImage()
-
-        return cell
-    }
-
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 55
-    }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            let realm = favoriteRealms[indexPath.row]
-            controller?.unfavorite(realm)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            toggleEmptyState()
-        }
-    }
-
-    private func toggleEmptyState() {
+    func toggleEmptyState() {
         if controller?.shouldShowEmptyState() ?? true {
             displayEmptyState()
             navigationItem.leftBarButtonItem = .None

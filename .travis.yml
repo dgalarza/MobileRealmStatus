@@ -20,4 +20,5 @@ cache:
 before_install:
   - bin/install-carthage
   - bin/carthage-bootstrap-if-needed
+  - bin/ci-setup
 sudo: false

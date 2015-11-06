@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-bundle install
-carthage bootstrap --platform iOS
-
 if [ ! -d WoW-Realm-Tracker/Secrets.swift ]; then
   cp WoW-Realm-Tracker/Secrets-Example.swift WoW-Realm-Tracker/Secrets.swift
 fi

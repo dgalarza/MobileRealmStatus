@@ -22,6 +22,10 @@
 		227DCF1D1B12AA8200BCE33A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; };
 		227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
 		227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
+		227E7CC41BED5C0200711A01 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7CC31BED5C0200711A01 /* Secrets.swift */; };
+		227E7CC71BED5CDE00711A01 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7CC61BED5CDE00711A01 /* RequestFactory.swift */; };
+		227E7CCA1BED5DB800711A01 /* RequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7CC91BED5DB800711A01 /* RequestFactorySpec.swift */; };
+		227E7CCC1BED5F8900711A01 /* RequestMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7CCB1BED5F8900711A01 /* RequestMatchers.swift */; };
 		22ABB28D1BECFDAE007BA008 /* FavoriteRealmsControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD31B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift */; };
 		22ABB28E1BECFDB4007BA008 /* FavoritesListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */; };
 		22ABB28F1BECFE2E007BA008 /* FakeFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */; };
@@ -112,6 +116,10 @@
 		227DCF141B12AA1A00BCE33A /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		227DCF1A1B12AA8200BCE33A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		227DCF1B1B12AA8200BCE33A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		227E7CC31BED5C0200711A01 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		227E7CC61BED5CDE00711A01 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		227E7CC91BED5DB800711A01 /* RequestFactorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactorySpec.swift; sourceTree = "<group>"; };
+		227E7CCB1BED5F8900711A01 /* RequestMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMatchers.swift; sourceTree = "<group>"; };
 		229F1DBA1B064C470025CD7B /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		22A270A51B081D6900C28773 /* RealmsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsDelegate.swift; sourceTree = "<group>"; };
 		22AEDE8B1B2132150010349A /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
@@ -207,6 +215,23 @@
 				22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		227E7CC51BED5C7300711A01 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22C767811BD176D000D62EC6 /* RealmsRequest.swift */,
+				227E7CC61BED5CDE00711A01 /* RequestFactory.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		227E7CC81BED5D8D00711A01 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				227E7CC91BED5DB800711A01 /* RequestFactorySpec.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		22AFCBCD1B0FD43300D6DD6B /* Models */ = {
@@ -324,7 +349,6 @@
 				229F1DBA1B064C470025CD7B /* FavoritesList.swift */,
 				22F5DFBA1AF86043002F37B1 /* Realm.swift */,
 				22F5B6E81B084F65008ED648 /* AppearanceManager.swift */,
-				22C767811BD176D000D62EC6 /* RealmsRequest.swift */,
 				22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */,
 			);
 			path = Models;
@@ -333,6 +357,7 @@
 		835DA964BB3534961244F546 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				227E7CC81BED5D8D00711A01 /* Networking */,
 				22E645C41B16BED50023931E /* ViewModels */,
 				22AFCBCD1B0FD43300D6DD6B /* Models */,
 				22BBC1961B0F696900DE700D /* Controllers */,
@@ -354,6 +379,7 @@
 		93F35FB60EDABD4F2FC92C13 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				227E7CCB1BED5F8900711A01 /* RequestMatchers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -396,6 +422,7 @@
 		F6222C0B871422E808E3A467 /* WoW-Realm-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				227E7CC51BED5C7300711A01 /* Networking */,
 				22EA7B5E1B8685460092932B /* WoW-Realm-Tracker.entitlements */,
 				2215F1E41B081C8E00505FCD /* ViewControllers */,
 				8A3561FEA902CA669A6EE32F /* Extensions */,
@@ -405,6 +432,7 @@
 				5DF07EEC4C064FF45FA6AC9A /* Controllers */,
 				62A5D87A88931DC8B8D20A47 /* Views */,
 				F8B173056C55D4A5CDF5CCF7 /* Resources */,
+				227E7CC31BED5C0200711A01 /* Secrets.swift */,
 			);
 			path = "WoW-Realm-Tracker";
 			sourceTree = "<group>";
@@ -587,6 +615,8 @@
 				22EB85001BA7C4D8004F2EE8 /* Realm.swift in Sources */,
 				22EB85041BA7C54D004F2EE8 /* FavoritesManager.swift in Sources */,
 				22E649291B06415000578AFD /* FavoritesViewController.swift in Sources */,
+				227E7CC71BED5CDE00711A01 /* RequestFactory.swift in Sources */,
+				227E7CC41BED5C0200711A01 /* Secrets.swift in Sources */,
 				225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */,
 				22AEDE901B2135060010349A /* UIViewController.swift in Sources */,
 				22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */,
@@ -607,6 +637,8 @@
 				227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */,
 				227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */,
 				22ABB28F1BECFE2E007BA008 /* FakeFavoritesManager.swift in Sources */,
+				227E7CCC1BED5F8900711A01 /* RequestMatchers.swift in Sources */,
+				227E7CCA1BED5DB800711A01 /* RequestFactorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

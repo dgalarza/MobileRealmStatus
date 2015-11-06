@@ -1,4 +1,6 @@
 # MobileRealmStatus #
+[![Build Status](https://travis-ci.org/dgalarza/MobileRealmStatus.svg?branch=master)](https://travis-ci.org/dgalarza/MobileRealmStatus)
+
 
 ## Trello ##
 https://trello.com/b/sDPxD15l/mobile-realm-status

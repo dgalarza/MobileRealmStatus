@@ -1,3 +1,5 @@
+@testable import WoW_Realm_Tracker
+
 class FakeRealmsSearchDelegate: RealmsSearchDelegate {
     var filteredRealms = [Realm]()
 

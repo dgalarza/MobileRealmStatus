@@ -1,20 +1,17 @@
-import Quick
+@testable import WoW_Realm_Tracker
 import Nimble
+import Quick
 
 private let favoritesDefaultsKey = "favorites"
 
 class FavoritesListSpec: QuickSpec {
     private var defaults: NSUserDefaults {
-        get {
-            let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-            return defaults!
-        }
+        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
+        return defaults!
     }
 
     private var favorites: [String] {
-        get {
-            return defaults.objectForKey(favoritesDefaultsKey) as! [String]
-        }
+        return defaults.objectForKey(favoritesDefaultsKey) as! [String]
     }
 
     override func spec() {

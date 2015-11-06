@@ -1,6 +1,7 @@
-import UIKit
-import Quick
+@testable import WoW_Realm_Tracker
 import Nimble
+import Quick
+import UIKit
 
 class RealmSearchControllerSpec: QuickSpec {
     override func spec() {

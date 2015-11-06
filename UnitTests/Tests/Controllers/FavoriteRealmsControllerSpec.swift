@@ -1,3 +1,4 @@
+@testable import WoW_Realm_Tracker
 import Quick
 import Nimble
 
@@ -7,7 +8,7 @@ class FavoriteRealmsControllerSpec: QuickSpec {
     override func spec() {
         describe("addFavorite") {
             it("adds the realm to the user's favorites") {
-                let realm = self.buildRealm("Arthas")
+                let realm = buildRealm("Arthas")
                 let favoritesManager = FakeFavoritesManager()
                 let favoriteRealmsController = FavoriteRealmsController(
                     realms: [realm],
@@ -22,7 +23,7 @@ class FavoriteRealmsControllerSpec: QuickSpec {
 
         describe("removeFavorite") {
             it("removes the given realm from the user's favorites") {
-                let realm = self.buildRealm("Arthas")
+                let realm = buildRealm("Arthas")
                 let favoritesManager = FakeFavoritesManager()
                 favoritesManager.addFavorite("Arthas")
 
@@ -40,7 +41,7 @@ class FavoriteRealmsControllerSpec: QuickSpec {
         describe("realmIsFavorited") {
             context("user has favorited the realm") {
                 it("returns true") {
-                    let realm = self.buildRealm("Arthas")
+                    let realm = buildRealm("Arthas")
                     let favoritesManager = FakeFavoritesManager()
                     let favoriteRealmsController = FavoriteRealmsController(
                         realms: [realm],
@@ -54,7 +55,7 @@ class FavoriteRealmsControllerSpec: QuickSpec {
 
             context("user has not favorited the realm") {
                 it("returns false") {
-                    let realm = self.buildRealm("Arthas")
+                    let realm = buildRealm("Arthas")
                     let favoritesManager = FakeFavoritesManager()
                     let favoriteRealmsController = FavoriteRealmsController(
                         realms: [realm],
@@ -81,7 +82,7 @@ class FavoriteRealmsControllerSpec: QuickSpec {
 
             context("user has favorited at least one realm") {
                 it("returns false") {
-                    let realm = self.buildRealm("Arthas")
+                    let realm = buildRealm("Arthas")
                     let favoritesMananager = FakeFavoritesManager()
                     favoritesMananager.addFavorite("Arthas")
                     let favoriteRealmsController = FavoriteRealmsController(
@@ -95,7 +96,9 @@ class FavoriteRealmsControllerSpec: QuickSpec {
         }
     }
 
-    private func buildRealm(name: String) -> Realm {
-        return Realm(name: name, type: "pvp", status: true)
-    }
+
+}
+
+private func buildRealm(name: String) -> Realm {
+    return Realm(name: name, type: .PvP, status: true)
 }

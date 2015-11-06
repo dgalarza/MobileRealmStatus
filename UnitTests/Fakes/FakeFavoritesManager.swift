@@ -1,3 +1,5 @@
+@testable import WoW_Realm_Tracker
+
 class FakeFavoritesManager: FavoritesManager {
     var favorites = [String]()
 

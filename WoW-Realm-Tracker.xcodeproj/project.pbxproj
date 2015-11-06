@@ -10,7 +10,7 @@
 		10316F86452F2FBCAB95DA31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB33AC4B689E2E3FC87C7696 /* Images.xcassets */; };
 		220570741B12ABB200ADE4B3 /* Nimble.framework in Carthage Copy Files */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		220570751B12ABB800ADE4B3 /* Quick.framework in Carthage Copy Files */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		22116D4F1BA8611100A6FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		22116D4F1BA8611100A6FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD86D0AEB85DAE73D0513B18 /* Main.storyboard */; };
 		221285CD1B097A7E002FA5B5 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		224FA16B1BD9761D0012CF95 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224FA16A1BD9761D0012CF95 /* Curry.framework */; };
@@ -21,39 +21,32 @@
 		227DCF1C1B12AA8200BCE33A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; };
 		227DCF1D1B12AA8200BCE33A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1B1B12AA8200BCE33A /* Quick.framework */; };
 		227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1971B0F699900DE700D /* FakeRealmsSearchDelegate.swift */; };
-		227DCF1F1B12AA9900BCE33A /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBC1991B0F69A900DE700D /* RealmSearchControllerSpec.swift */; };
-		227DCF221B12AA9900BCE33A /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
-		22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
-		22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
-		22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221285CC1B097A7E002FA5B5 /* UIfont.swift */; };
+		22ABB28D1BECFDAE007BA008 /* FavoriteRealmsControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD31B0FD8FE00D6DD6B /* FavoriteRealmsControllerSpec.swift */; };
+		22ABB28E1BECFDB4007BA008 /* FavoritesListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBCE1B0FD46D00D6DD6B /* FavoritesListSpec.swift */; };
+		22ABB28F1BECFE2E007BA008 /* FakeFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD91B10E4E900D6DD6B /* FakeFavoritesManager.swift */; };
 		22AEDE8C1B2132150010349A /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AEDE8B1B2132150010349A /* EmptyState.xib */; };
 		22AEDE8E1B2133140010349A /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEDE8D1B2133140010349A /* EmptyStateViewController.swift */; };
 		22AEDE901B2135060010349A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEDE8F1B2135060010349A /* UIViewController.swift */; };
 		22BD75C31B17F6B800AB8E8D /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD75C21B17F6B800AB8E8D /* SVProgressHUD.framework */; };
 		22C767801BD176B800D62EC6 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C7677F1BD176B800D62EC6 /* Swish.framework */; };
-		22C767821BD176D000D62EC6 /* RealmsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C767811BD176D000D62EC6 /* RealmsRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		22C767821BD176D000D62EC6 /* RealmsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C767811BD176D000D62EC6 /* RealmsRequest.swift */; };
 		22C767841BD1772000D62EC6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C767831BD1772000D62EC6 /* Result.framework */; };
 		22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E645C21B16B9640023931E /* RealmViewModel.swift */; };
-		22E645C71B16BF580023931E /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E645C21B16B9640023931E /* RealmViewModel.swift */; };
 		22E649291B06415000578AFD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E649281B06415000578AFD /* FavoritesViewController.swift */; };
-		22EB85001BA7C4D8004F2EE8 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85011BA7C4D8004F2EE8 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85021BA7C4ED004F2EE8 /* RealmsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A270A51B081D6900C28773 /* RealmsDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85031BA7C541004F2EE8 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85041BA7C54D004F2EE8 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85051BA7C556004F2EE8 /* RealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E51B081CBB00505FCD /* RealmsController.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85071BA7C568004F2EE8 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85081BA7C57C004F2EE8 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB85091BA7C58B004F2EE8 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; settings = {ASSET_TAGS = (); }; };
-		22EB850A1BA7C593004F2EE8 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
+		22EB85001BA7C4D8004F2EE8 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBA1AF86043002F37B1 /* Realm.swift */; };
+		22EB85021BA7C4ED004F2EE8 /* RealmsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A270A51B081D6900C28773 /* RealmsDelegate.swift */; };
+		22EB85031BA7C541004F2EE8 /* FavoriteRealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22542EB51B0828F700145420 /* FavoriteRealmsController.swift */; };
+		22EB85041BA7C54D004F2EE8 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFCBD61B10E49900D6DD6B /* FavoritesManager.swift */; };
+		22EB85051BA7C556004F2EE8 /* RealmsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E51B081CBB00505FCD /* RealmsController.swift */; };
+		22EB85071BA7C568004F2EE8 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F1DBA1B064C470025CD7B /* FavoritesList.swift */; };
 		22F5B6E51B08427E008ED648 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E41B08427E008ED648 /* UIWindow.swift */; };
 		22F5B6E71B084305008ED648 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E61B084305008ED648 /* UIColor.swift */; };
 		22F5B6E91B084F65008ED648 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6E81B084F65008ED648 /* AppearanceManager.swift */; };
 		22F5B6F11B0964CD008ED648 /* RealmsSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F01B0964CD008ED648 /* RealmsSearchDelegate.swift */; };
 		22F5B6F71B096B39008ED648 /* RealmSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5B6F61B096B39008ED648 /* RealmSearchController.swift */; };
 		22F5DFBF1AF860D9002F37B1 /* RealmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5DFBE1AF860D9002F37B1 /* RealmsTableViewController.swift */; };
-		22FC26821BDC87FC00D68EA4 /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		22FC26821BDC87FC00D68EA4 /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC26811BDC87FC00D68EA4 /* FavoritesDataSource.swift */; };
 		32D45B7D3468CD1A61B9EEF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFABA4ED8A5CBB54DC232F79 /* Foundation.framework */; };
 		5E9BBDBCCC8573D5B56DFAEC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E24E3251A184795B15E78DD /* Settings.bundle */; };
 		A048D804A76A8C487E6C4582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */; };
@@ -609,18 +602,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22ABB28E1BECFDB4007BA008 /* FavoritesListSpec.swift in Sources */,
+				22ABB28D1BECFDAE007BA008 /* FavoriteRealmsControllerSpec.swift in Sources */,
 				227DCF201B12AA9900BCE33A /* RealmSearchControllerSpec.swift in Sources */,
 				227DCF1E1B12AA9900BCE33A /* FakeRealmsSearchDelegate.swift in Sources */,
-				227DCF221B12AA9900BCE33A /* RealmsSearchDelegate.swift in Sources */,
-				227DCF1F1B12AA9900BCE33A /* RealmSearchController.swift in Sources */,
-				22EB85011BA7C4D8004F2EE8 /* Realm.swift in Sources */,
-				22EB85081BA7C57C004F2EE8 /* FavoriteRealmsController.swift in Sources */,
-				22EB85091BA7C58B004F2EE8 /* FavoritesManager.swift in Sources */,
-				22E645C71B16BF580023931E /* RealmViewModel.swift in Sources */,
-				22A9F9C31B0F6FCC00E3D249 /* UIfont.swift in Sources */,
-				22A9F9C21B0F6FC800E3D249 /* UIColor.swift in Sources */,
-				22A9F9C11B0F6FBA00E3D249 /* UIWindow.swift in Sources */,
-				22EB850A1BA7C593004F2EE8 /* FavoritesList.swift in Sources */,
+				22ABB28F1BECFE2E007BA008 /* FakeFavoritesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +692,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -813,7 +799,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

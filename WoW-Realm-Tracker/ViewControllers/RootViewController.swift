@@ -14,7 +14,7 @@ class RootViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .None)
         let nav = storyboard.instantiateInitialViewController() as! UINavigationController
         let vc = nav.topViewController as! FavoritesViewController
-        vc.controller = FavoriteRealmsController(realms: realms)
+        vc.viewModel = RealmsListViewModel(realms: realms)
 
         presentViewController(nav, animated: true, completion: nil)
     }

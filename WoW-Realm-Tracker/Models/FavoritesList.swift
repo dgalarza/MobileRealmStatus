@@ -2,29 +2,18 @@ import UIKit
 import Foundation
 
 class FavoritesList: FavoritesManager {
-    class var sharedFavoritesList : FavoritesList {
-        struct Singleton {
-            static let instance = FavoritesList()
-        }
+    static let sharedFavoritesList = FavoritesList()
 
-        return Singleton.instance
-    }
-
-    private(set) var favorites: [String]
+    private(set) var favorites: Set<String>
 
     init() {
-        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-        let storedFavorites = defaults?.objectForKey("favorites") as? [String]
-
-        if storedFavorites != nil {
-            favorites = storedFavorites!
-        } else {
-            favorites = []
-        }
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let favoritesArray = defaults.arrayForKey("favorites") as! [String]
+        favorites = Set(favoritesArray)
     }
 
     func addFavorite(realmName: String) {
-        favorites.append(realmName)
+        favorites.insert(realmName)
         saveFavorites()
     }
 
@@ -35,9 +24,17 @@ class FavoritesList: FavoritesManager {
         }
     }
 
-    private func saveFavorites() {
-        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-        defaults?.setObject(favorites, forKey: "favorites")
-        defaults?.synchronize()
+
+}
+
+private extension FavoritesList {
+    var favoritesArray: [String] {
+        return Array(favorites)
+    }
+
+    func saveFavorites() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(favoritesArray, forKey: "favorites")
+        defaults.synchronize()
     }
 }

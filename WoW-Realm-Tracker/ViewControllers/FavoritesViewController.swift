@@ -2,7 +2,7 @@ import UIKit
 import Result
 
 class FavoritesViewController: UITableViewController {
-    var controller: FavoriteRealmsController?
+    var viewModel: RealmsListViewModel?
     let favoritesDataSource = FavoritesDataSource()
 
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class FavoritesViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let realmsViewController = segue.destinationViewController as! RealmsTableViewController
-        realmsViewController.controller = controller
+        realmsViewController.viewModel = viewModel
     }
 
     @IBAction func refresh(sender: UIRefreshControl) {
@@ -29,12 +29,12 @@ class FavoritesViewController: UITableViewController {
     }
 
     func toggleEmptyState() {
-        if controller?.shouldShowEmptyState() ?? true {
-            displayEmptyState()
-            navigationItem.leftBarButtonItem = .None
-        } else {
+        if viewModel?.hasFavorites ?? false {
             hideEmptyState()
             navigationItem.leftBarButtonItem = editButtonItem()
+        } else {
+            displayEmptyState()
+            navigationItem.leftBarButtonItem = .None
         }
     }
 
@@ -51,10 +51,10 @@ class FavoritesViewController: UITableViewController {
 
 extension FavoritesViewController: RealmsDelegate {
     func receivedRealms(response: Result<[Realm], NSError>) {
-        let controller = response.map { FavoriteRealmsController(realms: $0) }
+        let viewModel = response.map { RealmsListViewModel(realms: $0) }
 
-        if let favoritesController = controller.value {
-            self.controller = favoritesController
+        if let favoritesViewModel = viewModel.value {
+            self.viewModel = favoritesViewModel
             tableView.reloadData()
         }
 

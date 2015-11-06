@@ -6,12 +6,11 @@ private let favoritesDefaultsKey = "favorites"
 
 class FavoritesListSpec: QuickSpec {
     private var defaults: NSUserDefaults {
-        let defaults = NSUserDefaults(suiteName: "group.com.damiangalarza.realmtracker")
-        return defaults!
+        return NSUserDefaults.standardUserDefaults()
     }
 
     private var favorites: [String] {
-        return defaults.objectForKey(favoritesDefaultsKey) as! [String]
+        return defaults.arrayForKey(favoritesDefaultsKey) as! [String]
     }
 
     override func spec() {
@@ -44,6 +43,33 @@ class FavoritesListSpec: QuickSpec {
                 defaults.synchronize()
                 let favorites = defaults.objectForKey(favoritesDefaultsKey) as! [String]
                 expect(favorites).notTo(contain("Arthas"))
+            }
+        }
+
+        describe("isFavorited") {
+            it("returns true when the given realm is favorited") {
+                FavoritesList.sharedFavoritesList.addFavorite("Arthas")
+
+                let isFavorited = FavoritesList.sharedFavoritesList.isFavorited("Arthas")
+
+                expect(isFavorited).to(beTrue())
+            }
+
+            it("returns false when the given realm is not favorited") {
+                let isFavorited = FavoritesList.sharedFavoritesList.isFavorited("Other")
+
+                expect(isFavorited).to(beFalse())
+            }
+        }
+
+        describe("favoritesCount") {
+            it("returns the number of favorited realms") {
+                FavoritesList.sharedFavoritesList.addFavorite("Arthas")
+                FavoritesList.sharedFavoritesList.addFavorite("Skullcrusher")
+
+                let favoritesCount = FavoritesList.sharedFavoritesList.favoritesCount
+
+                expect(favoritesCount).to(equal(2))
             }
         }
     }

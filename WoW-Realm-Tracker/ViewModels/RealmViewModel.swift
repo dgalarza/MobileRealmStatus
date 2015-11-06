@@ -1,6 +1,6 @@
 struct RealmViewModel {
     let realm: Realm
-    let favoritesController: FavoriteRealmsController
+    let isFavorited: Bool
 
     var name: String {
         return realm.name
@@ -9,7 +9,7 @@ struct RealmViewModel {
     var favoritedImage: String {
         let image: String
 
-        if isFavorited() {
+        if isFavorited {
             image = "Favorited"
         } else {
             image = "Favorite"
@@ -32,9 +32,5 @@ struct RealmViewModel {
         }
 
         return status
-    }
-
-    private func isFavorited() -> Bool {
-        return  favoritesController.realmIsFavorited(realm)
     }
 }

@@ -4,20 +4,21 @@ class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
     private let cellIdentifier = "Realm"
     weak var viewController: FavoritesViewController!
 
-    private var favoriteRealms: [Realm] {
-        return viewController.controller.flatMap { $0.favoriteRealms } ?? []
+    var viewModel: RealmsListViewModel? {
+        return viewController.viewModel
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteRealms.count
+        return viewModel?.favoritesCount ?? 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
-        let realm = favoriteRealms[indexPath.row]
 
-        cell.viewModel = RealmViewModel(realm: realm, favoritesController: viewController.controller!)
-        cell.includeStatusImage()
+        if let realm = viewModel?.favoritedViewModelForCellAtIndexPath(indexPath) {
+            cell.viewModel = realm
+            cell.includeStatusImage()
+        }
 
         return cell
     }
@@ -32,8 +33,7 @@ class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            let realm = favoriteRealms[indexPath.row]
-            viewController.controller?.unfavorite(realm)
+            viewModel?.removeFavoritedRealmAtIndexPath(indexPath)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             viewController.toggleEmptyState()
         }

@@ -34,3 +34,14 @@ extension Realm: Decodable {
 }
 
 extension Realm.RealmType: Decodable { }
+
+extension Realm: Equatable {}
+func == (lhs: Realm, rhs: Realm) -> Bool {
+    return lhs.name == rhs.name
+}
+
+extension Realm: Hashable {
+    var hashValue: Int {
+        return name.hashValue
+    }
+}

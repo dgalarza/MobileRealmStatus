@@ -15,8 +15,9 @@ script: bin/test
 
 cache:
   directories:
-    - "Carthage"
+    - Carthage
 
 before_install:
   - bin/install-carthage
   - bin/carthage-bootstrap-if-needed
+sudo: false

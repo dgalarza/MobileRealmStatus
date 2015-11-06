@@ -4,9 +4,18 @@ branches:
   only:
     master
 
-env: export LANG=en_US.UTF-8
-
-script: bin/test
-
 notifications:
   email: false
+
+osx_image: xcode7.1
+xcode_project: WoW-Realm-Tracker.xcodeproj
+xcode_scheme: WoW-Realm-Tracker
+xcode_sdk: iphonesimulator9.1
+script: bin/test
+
+cache:
+  directories: "Carthage"
+
+before_install:
+  - bin/install-carthage
+  - bin/carthage-bootstrap-if-needed

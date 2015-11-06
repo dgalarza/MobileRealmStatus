@@ -14,7 +14,8 @@ xcode_sdk: iphonesimulator9.1
 script: bin/test
 
 cache:
-  directories: "Carthage"
+  directories:
+    - "Carthage"
 
 before_install:
   - bin/install-carthage

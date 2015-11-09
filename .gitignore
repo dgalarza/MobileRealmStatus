@@ -35,3 +35,9 @@ Pods
 Carthage
 
 Secrets.swift
+
+# fastlane artifacts
+*.app.dSYM.zip
+*.ipa*
+fastlane/report.xml
+fastlane/metadata

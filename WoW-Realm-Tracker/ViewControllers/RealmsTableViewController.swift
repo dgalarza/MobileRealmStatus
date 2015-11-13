@@ -1,40 +1,42 @@
 import UIKit
 
-private let cellIdentifier = "Realm"
-
 class RealmsTableViewController: UITableViewController {
     var searchController: UISearchController!
     var viewModel: RealmsListViewModel?
 
+    let dataSource = RealmsDataSource()
+    let searchResultsController = SearchResultsController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        searchController = UISearchController(searchResultsController: nil)
-//        searchController.searchResultsUpdater = self
-//        tableView.tableHeaderView = searchController.searchBar
-//        definesPresentationContext = true
+
+        dataSource.viewController = self
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
+
+        searchController = UISearchController(searchResultsController: searchResultsController)
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
     }
+}
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.count ?? 0
-    }
+extension RealmsTableViewController: RealmsListController {}
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 55
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RealmCell
-
-        if let realm = viewModel?.viewModelForCellAtIndexPath(indexPath) {
-            cell.viewModel = realm
+extension RealmsTableViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let term = searchController.searchBar.text {
+            let filteredRealmsViewModel = viewModel!.filter(term)
+            searchResultsController.viewModel = filteredRealmsViewModel
         }
-
-        return cell
     }
+}
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        viewModel?.toggleFavoriteForRealmAtIndexPath(indexPath)
+extension RealmsTableViewController: UISearchControllerDelegate {
+    func didDismissSearchController(searchController: UISearchController) {
         tableView.reloadData()
     }
 }

@@ -8,8 +8,8 @@ class FavoritesList: FavoritesManager {
 
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
-        let favoritesArray = defaults.arrayForKey("favorites") as! [String]
-        favorites = Set(favoritesArray)
+        let favoritesArray = defaults.arrayForKey("favorites") as? [String]
+        favorites = Set(favoritesArray ?? [])
     }
 
     func addFavorite(realmName: String) {
@@ -23,8 +23,6 @@ class FavoritesList: FavoritesManager {
             saveFavorites()
         }
     }
-
-
 }
 
 private extension FavoritesList {

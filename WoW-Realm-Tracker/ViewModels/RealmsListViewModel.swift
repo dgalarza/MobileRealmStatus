@@ -47,6 +47,13 @@ class RealmsListViewModel {
         let realm = favoriteRealms[indexPath.row]
         favoritesManager.removeFavorite(realm.name)
     }
+
+    func filter(term: String) -> RealmsListViewModel {
+        let predicate = NSPredicate(format: "self CONTAINS[c] %@", term)
+        let filteredRealms = realms.filter { realm in predicate.evaluateWithObject(realm.name) }
+
+        return RealmsListViewModel(realms: filteredRealms, favoritesManager: favoritesManager)
+    }
 }
 
 private extension RealmsListViewModel {

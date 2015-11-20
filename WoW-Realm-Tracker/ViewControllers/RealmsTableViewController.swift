@@ -14,13 +14,14 @@ class RealmsTableViewController: UITableViewController {
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
 
-        searchController = UISearchController(searchResultsController: searchResultsController)
-        searchController.searchResultsUpdater = self
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
+        setUpSearch()
+    }
+
+    deinit {
+        // Work around bug around search controller loading view while deallocating
+        // http://www.openradar.me/22250107
+        searchController.loadViewIfNeeded()
     }
 }
 
@@ -38,5 +39,16 @@ extension RealmsTableViewController: UISearchResultsUpdating {
 extension RealmsTableViewController: UISearchControllerDelegate {
     func didDismissSearchController(searchController: UISearchController) {
         tableView.reloadData()
+    }
+}
+
+private extension RealmsTableViewController {
+    func setUpSearch() {
+        searchController = UISearchController(searchResultsController: searchResultsController)
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
     }
 }

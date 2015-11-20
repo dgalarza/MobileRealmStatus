@@ -15,7 +15,6 @@
 		2215F1E31B06E9CC00505FCD /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F1E21B06E9CC00505FCD /* RealmCell.swift */; };
 		224FA16B1BD9761D0012CF95 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224FA16A1BD9761D0012CF95 /* Curry.framework */; };
 		225B4ABA1B212C7D00C3C3F7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */; };
-		225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */; };
 		2262D0431B90FBBE00881F3F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF121B12AA1A00BCE33A /* Argo.framework */; };
 		227DCF171B12AA1A00BCE33A /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF141B12AA1A00BCE33A /* Runes.framework */; };
 		227DCF1C1B12AA8200BCE33A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227DCF1A1B12AA8200BCE33A /* Nimble.framework */; };
@@ -109,7 +108,6 @@
 		2215F1E51B081CBB00505FCD /* RealmsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsController.swift; sourceTree = "<group>"; };
 		224FA16A1BD9761D0012CF95 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		225B4AB91B212C7D00C3C3F7 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		2262D0411B90FBB300881F3F /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		227DCF121B12AA1A00BCE33A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		227DCF131B12AA1A00BCE33A /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 			children = (
 				2215F1E51B081CBB00505FCD /* RealmsController.swift */,
 				F8C64CF0C9C5FEFC69FD22B5 /* AppDelegate.swift */,
-				225B4ABB1B212D6800C3C3F7 /* ApplicationController.swift */,
 				227F88F91BF672B800D28AD0 /* SearchResultsController.swift */,
 			);
 			path = Controllers;
@@ -629,7 +626,6 @@
 				22E649291B06415000578AFD /* FavoritesViewController.swift in Sources */,
 				227E7CC71BED5CDE00711A01 /* RequestFactory.swift in Sources */,
 				227E7CC41BED5C0200711A01 /* Secrets.swift in Sources */,
-				225B4ABC1B212D6800C3C3F7 /* ApplicationController.swift in Sources */,
 				22AEDE901B2135060010349A /* UIViewController.swift in Sources */,
 				22E645C31B16B9640023931E /* RealmViewModel.swift in Sources */,
 				227F88F61BF670C300D28AD0 /* RealmsDataSource.swift in Sources */,

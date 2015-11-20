@@ -59,6 +59,5 @@ extension FavoritesViewController: RealmsDelegate {
         }
 
         refreshControl?.endRefreshing()
-        SVProgressHUD.dismiss()
     }
 }

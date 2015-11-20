@@ -1,13 +1,11 @@
 import UIKit
 import Result
+import Swish
 
 class RootViewController: UIViewController {
-    var controller: RealmsController?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.showWithMaskType(.Clear)
-        controller?.retrieveRealms()
+        fetchRealms()
     }
 
     private func transitionToFavorites(realms: [Realm]) {
@@ -20,7 +18,14 @@ class RootViewController: UIViewController {
     }
 }
 
-extension RootViewController: RealmsDelegate {
+private extension RootViewController {
+    func fetchRealms() {
+        SVProgressHUD.showWithMaskType(.Clear)
+
+        let request = RealmsRequest()
+        APIClient().performRequest(request, completionHandler: receivedRealms)
+    }
+
     func receivedRealms(response: Result<[Realm], NSError>) {
         if let realms = response.value {
             transitionToFavorites(realms)
